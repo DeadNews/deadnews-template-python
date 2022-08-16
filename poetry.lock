@@ -720,7 +720,7 @@ testing = ["coverage (>=6.2)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "e331b135586f2ee27b1f5d36f419e68221733a532b62750a6b9b93621910f49d"
+content-hash = "d4eb4aa2d6b2abc5645074a2f1a75202bf4f521068c97a07df88b21caa6b04d2"
 
 [metadata.files]
 astor = [
