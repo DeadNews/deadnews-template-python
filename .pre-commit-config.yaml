@@ -26,6 +26,7 @@ repos:
           - flake8-pie
           - flake8-pyproject
           - flake8-pytest-style
+          - flake8-requirements
           - flake8-simplify
           - flake8-unused-arguments
           - flake8-use-pathlib
