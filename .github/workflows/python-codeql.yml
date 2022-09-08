@@ -2,21 +2,18 @@ name: CodeQL
 
 on:
   push:
-    branches: [main, dev]
+    branches: [main]
   pull_request:
-    branches: [main, dev]
+    branches: [main]
   schedule:
     - cron: 23 17 * * 0
 
-env:
-  PYTHON_VERSION: "3.10"
-
 jobs:
-  analyze:
-    name: Analyze
-    runs-on: ubuntu-latest
+  codeql:
+    name: CodeQL analyze
     permissions:
       security-events: write
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
