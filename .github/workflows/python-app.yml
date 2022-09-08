@@ -13,7 +13,6 @@ permissions:
 
 env:
   PYTHON_VERSION: "3.10"
-  FORCE_COLOR: 1
 
 jobs:
   code-quality:

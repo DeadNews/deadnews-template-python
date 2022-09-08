@@ -2,18 +2,14 @@ name: CodeQL
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
   pull_request:
-    branches: [main]
+    branches: [main, dev]
   schedule:
     - cron: 23 17 * * 0
 
-permissions:
-  security-events: write
-
 env:
   PYTHON_VERSION: "3.10"
-  FORCE_COLOR: 1
 
 jobs:
   analyze:
@@ -24,10 +20,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
-      - uses: actions/setup-python@v4
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
