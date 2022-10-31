@@ -33,7 +33,7 @@ repos:
           - pep8-naming
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.1.0
+    rev: v3.2.0
     hooks:
       - id: pyupgrade
         args: [--py39-plus]
@@ -81,7 +81,7 @@ repos:
         args: [--check]
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.18.3
+    rev: 0.18.4
     hooks:
       - id: check-dependabot
       - id: check-github-workflows
