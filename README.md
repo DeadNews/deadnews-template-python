@@ -11,4 +11,6 @@
 
 ```sh
 pip install deadnews-python-template
+# or
+pipx install deadnews-python-template
 ```
