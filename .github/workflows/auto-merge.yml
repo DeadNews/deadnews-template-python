@@ -4,24 +4,22 @@ on: [pull_request]
 
 jobs:
   wait-for-checks:
-    runs-on: ubuntu-latest
     if: ${{ (github.actor == 'dependabot[bot]') || (github.actor == 'pre-commit-ci[bot]') }}
+    runs-on: ubuntu-latest
     steps:
-       - name: Wait for check is finished
-         uses: lewagon/wait-on-check-action@v1.2.0
-         id: wait-for-checks
-         with:
-             ref: ${{ github.event.pull_request.head.sha || github.sha }}
-             running-workflow-name: wait-for-checks
-             repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Wait for other checks to succeed
+        uses: lewagon/wait-on-check-action@v1.2.0
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          running-workflow-name: wait-for-checks
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
   auto-merge:
-    runs-on: ubuntu-latest
     needs: [wait-for-checks]
-    if: ${{ (github.actor == 'dependabot[bot]') || (github.actor == 'pre-commit-ci[bot]') }}
     permissions:
       contents: write
       pull-requests: write
+    runs-on: ubuntu-latest
     steps:
       - name: Enable auto-merge for Bot PRs
         run: gh pr merge --auto --squash "$PR_URL"
