@@ -8,7 +8,7 @@ jobs:
     if: ${{ (github.actor == 'dependabot[bot]') || (github.actor == 'pre-commit-ci[bot]') }}
     steps:
        - name: Wait for check is finished
-         uses: lewagon/wait-on-check-action@v1
+         uses: lewagon/wait-on-check-action@v1.2
          id: wait-for-checks
          with:
              ref: ${{ github.event.pull_request.head.sha || github.sha }}
