@@ -17,6 +17,14 @@ repos:
       - id: check-dependabot
       - id: check-github-workflows
 
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.16
+    hooks:
+      - id: mdformat
+        additional_dependencies:
+          - mdformat-toc
+          - mdformat-gfm
+
   - repo: https://github.com/asottile/yesqa
     rev: v1.4.0
     hooks:
@@ -82,11 +90,3 @@ repos:
   #     - id: poetry-check
   #     - id: poetry-lock
   #       args: [--check]
-
-  - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.16
-    hooks:
-      - id: mdformat
-        additional_dependencies:
-          - mdformat-toc
-          - mdformat-gfm
