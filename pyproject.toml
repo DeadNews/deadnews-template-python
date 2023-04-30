@@ -82,6 +82,9 @@ skips = [
   "B603", # Calling subprocess.Popen without shell=True.
 ]
 
+[tool.ruff]
+line-length = 99
+
 [tool.pytest.ini_options]
 addopts = "--verbose --cov=./src"
 testpaths = ["tests"]
