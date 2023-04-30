@@ -3,6 +3,7 @@
   "recommendations": [
     "ms-python.python",
     "ms-python.black-formatter",
-    "ms-python.isort"
+    "ms-python.isort",
+    "charliermarsh.ruff"
   ]
 }

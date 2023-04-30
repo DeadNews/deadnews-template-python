@@ -5,15 +5,11 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
+      // "source.fixAll": true
     }
   },
   // mypy
   "python.linting.mypyEnabled": true,
-  // flake8
-  "python.linting.flake8Enabled": true,
-  // bandit
-  "python.linting.banditEnabled": true,
-  "python.linting.banditArgs": ["-c", "pyproject.toml"],
   // pytest
   "python.testing.pytestEnabled": true
 }
