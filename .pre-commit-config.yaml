@@ -64,3 +64,8 @@ repos:
       - id: poetry-check
       - id: poetry-lock
         args: [--check]
+
+  - repo: https://github.com/koyeung/ko-poetry-audit-plugin
+    rev: 0.7.0
+    hooks:
+      - id: poetry-audit
