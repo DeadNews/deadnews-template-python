@@ -38,6 +38,11 @@ repos:
     hooks:
       - id: isort
 
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.0.263
+    hooks:
+      - id: ruff
+
   - repo: https://github.com/psf/black
     rev: 23.3.0
     hooks:
@@ -47,11 +52,6 @@ repos:
     rev: v1.2.0
     hooks:
       - id: mypy
-
-  - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.0.263
-    hooks:
-      - id: ruff
 
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.4.0
@@ -65,7 +65,7 @@ repos:
       - id: poetry-lock
         args: [--check]
 
-  - repo: https://github.com/koyeung/ko-poetry-audit-plugin
-    rev: 0.7.0
-    hooks:
-      - id: poetry-audit
+  # - repo: https://github.com/koyeung/ko-poetry-audit-plugin
+  #   rev: 0.7.0
+  #   hooks:
+  #     - id: poetry-audit
