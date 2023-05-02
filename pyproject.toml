@@ -19,7 +19,6 @@ python = "^3.9"
 
 [tool.poetry.group.ci.dependencies]
 black = "^23.3.0"
-isort = "^5.12.0"
 mypy = "^1.2.0"
 poethepoet = "^0.19.0"
 ruff = "^0.0.263"
@@ -29,11 +28,10 @@ pytest = "^7.3.1"
 pytest-cov = "^4.0.0"
 
 [tool.poe.tasks]
-isort = "isort . --check-only --diff"
+ruff = "ruff check . --diff"
 black = "black . --check --diff"
 mypy = "mypy ."
-ruff = "ruff check ."
-ci.sequence = ["isort", "ruff", "black", "mypy"]
+ci.sequence = ["ruff", "black", "mypy"]
 
 [tool.poetry-dynamic-versioning]
 enable = true
@@ -76,29 +74,43 @@ select = [
   "C4",  # flake8-comprehensions
   "C90", # mccabe
   "E",   # pycodestyle
+  "ERA", # eradicate
   "F",   # pyflakes
-  # "I",   # isort
+  "I",   # isort
+  "INP", # flake8-no-pep420
   "ISC", # flake8-implicit-str-concat
   "N",   # pep8-naming
   "PIE", # flake8-pie
+  "PL",  # pylint
   "PT",  # flake8-pytest-style
   "PTH", # flake8-use-pathlib
+  "RSE", # flake8-raise
   "RUF", # ruff-specific rules
   "S",   # flake8-bandit
   "SIM", # flake8-simplify
+  "SLF", # flake8-self
   "T10", # flake8-debugger
+  "T20", # flake8-print
+  "TCH", # flake8-type-checking
+  "TID", # flake8-tidy-imports
   "UP",  # pyupgrade
 ]
 ignore = [
-  "E501", # Line too long
-  "S603", # Calling subprocess.Popen with shell=False
+  "E501",    # Line too long
+  "PLR2004", # Magic value used in comparison
+  "S113",    # Missing requests timeout
+  "S603",    # Calling subprocess.Popen with shell=False
 ]
 
 [tool.ruff.flake8-comprehensions]
 allow-dict-calls-with-keyword-arguments = false
 
+[tool.ruff.flake8-tidy-imports]
+ban-relative-imports = "all"
+
 [tool.ruff.mccabe]
 max-complexity = 10
 
 [tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
 "tests/*" = ["S"]
