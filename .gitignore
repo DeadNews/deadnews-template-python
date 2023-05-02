@@ -135,9 +135,6 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
-# ruff
-.ruff_cache
-
 # mkdocs documentation
 /site
 
@@ -154,6 +151,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# ruff
+.ruff_cache/
 
 # vscode
 .vscode/*
