@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "deadnews-python-template"
-version = "placeholder"
+version = "0.0.0"
 description = "Python Project Template"
 authors = ["DeadNews <aurczpbgr@mozmail.com>"]
 license = "MIT"
