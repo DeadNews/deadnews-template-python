@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""
-Docstring
-"""
+"""Docstring."""
 from __future__ import annotations
 
 
