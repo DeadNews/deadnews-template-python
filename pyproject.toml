@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "deadnews-python-template"
-version = "1.0.1"
+version = "placeholder"
 description = "Python Project Template"
 authors = ["DeadNews <aurczpbgr@mozmail.com>"]
 license = "MIT"
@@ -25,9 +25,17 @@ safety = "^2.3.5"
 pytest = "^7.3.1"
 pytest-cov = "^4.0.0"
 
+[tool.poetry.group.build.dependencies]
+poetry-dynamic-versioning = "^0.21.4"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+vcs = "git"
+style = "semver"
+
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.black]
 line-length = 99

@@ -84,7 +84,9 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Build package
-        run: poetry build
+        run: |
+          poetry install --only build
+          poetry run poetry-dynamic-versioning
 
       - name: Publish package to PyPI
         run: poetry publish --no-interaction

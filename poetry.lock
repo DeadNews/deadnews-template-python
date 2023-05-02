@@ -165,6 +165,21 @@ conda = ["pyyaml"]
 pipenv = ["pipenv"]
 
 [[package]]
+name = "dunamai"
+version = "1.16.0"
+description = "Dynamic version generation"
+category = "dev"
+optional = false
+python-versions = ">=3.5,<4.0"
+files = [
+    {file = "dunamai-1.16.0-py3-none-any.whl", hash = "sha256:dc92d817f3bc155e8b129e8c705c36bb15a7e950e2698a93aea142732a888e98"},
+    {file = "dunamai-1.16.0.tar.gz", hash = "sha256:bfe8e23cc5a1ceed1c7f791674ea24cf832a53a5da73f046eeb43367ccfc3f77"},
+]
+
+[package.dependencies]
+packaging = ">=20.9"
+
+[[package]]
 name = "exceptiongroup"
 version = "1.1.1"
 description = "Backport of PEP 654 (exception groups)"
@@ -455,6 +470,26 @@ tomli = ">=1.2.2"
 poetry-plugin = ["poetry (>=1.0,<2.0)"]
 
 [[package]]
+name = "poetry-dynamic-versioning"
+version = "0.21.4"
+description = "Plugin for Poetry to enable dynamic versioning based on VCS tags"
+category = "dev"
+optional = false
+python-versions = ">=3.7,<4.0"
+files = [
+    {file = "poetry_dynamic_versioning-0.21.4-py3-none-any.whl", hash = "sha256:a1ed0c25ca8fd64c69bb362adecfbe057b3db9bd1e9aba100b2c85e51e7cf5fb"},
+    {file = "poetry_dynamic_versioning-0.21.4.tar.gz", hash = "sha256:186fbee28ed14969ac2403905330dab9cb9d231d604ed57a05cf9add2f117b79"},
+]
+
+[package.dependencies]
+dunamai = ">=1.16.0,<2.0.0"
+jinja2 = ">=2.11.1,<4"
+tomlkit = ">=0.4"
+
+[package.extras]
+plugin = ["poetry (>=1.2.0,<2.0.0)"]
+
+[[package]]
 name = "pytest"
 version = "7.3.1"
 description = "pytest: simple powerful testing with Python"
@@ -673,6 +708,18 @@ files = [
 ]
 
 [[package]]
+name = "tomlkit"
+version = "0.11.8"
+description = "Style preserving TOML library"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "tomlkit-0.11.8-py3-none-any.whl", hash = "sha256:8c726c4c202bdb148667835f68d68780b9a003a9ec34167b6c673b38eff2a171"},
+    {file = "tomlkit-0.11.8.tar.gz", hash = "sha256:9330fc7faa1db67b541b28e62018c17d20be733177d290a13b24c62d1614e0c3"},
+]
+
+[[package]]
 name = "typing-extensions"
 version = "4.5.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
@@ -705,4 +752,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "16d09788089b3c21ac75f20039fc3fc2f6a33cc13c71c0b4d5c660bf936a8d60"
+content-hash = "62412b453c785863d0ac37cb126f05682a1c134606318eb853c637652f30d845"
