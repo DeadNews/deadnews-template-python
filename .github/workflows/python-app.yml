@@ -57,7 +57,7 @@ jobs:
 
       - name: Install poetry
         if: steps.cache-runtime.outputs.cache-hit != 'true'
-        run: pipx install -r requirements-ci.txt
+        run: cat requirements-ci.txt | xargs pipx install
 
       - name: Setup/Cache dependencies
         uses: actions/setup-python@v4
