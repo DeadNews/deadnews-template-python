@@ -52,8 +52,14 @@ jobs:
         id: cache-runtime
         uses: actions/cache@v3
         with:
-          path: ${{ env.PIPX_HOME }} # ${{ env.PIPX_BIN_DIR }}
-          key: pipx-${{ hashFiles('requirements-ci.txt') }}
+          path: |
+            /opt/pipx
+            /opt/pipx_bin
+          key:
+            pipx-${{ hashFiles('requirements-ci.txt') }}
+
+            # ${{ env.PIPX_HOME }}
+            # ${{ env.PIPX_BIN_DIR }}
 
       - name: Install poetry
         if: steps.cache-runtime.outputs.cache-hit != 'true'
