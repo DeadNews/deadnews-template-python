@@ -53,13 +53,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            /opt/pipx/venvs/poetry
-            /opt/pipx_bin/poetry
-          key:
-            pipx-${{ matrix.os }}-${{ matrix.python-version }}-${{ hashFiles('requirements-ci.txt') }}
-
-            # ${{ env.PIPX_HOME }}
-            # ${{ env.PIPX_BIN_DIR }}
+            ${{ env.PIPX_HOME }}/venvs/poetry
+            ${{ env.PIPX_BIN_DIR }}/poetry
+          key: pipx-${{ matrix.os }}-${{ matrix.python-version }}-${{ hashFiles('requirements-ci.txt') }}
 
       - name: Install poetry
         if: steps.cache-runtime.outputs.cache-hit != 'true'
