@@ -65,6 +65,8 @@ exclude_lines = ["if __name__ == .__main__.:"]
 line-length = 99
 select = ["ALL"]
 ignore = [
+  "D203",    # 1 blank line required before class docstring
+  "D212",    # Multi-line docstring summary should start at the first line
   "E501",    # Line too long
   "EXE001",  # Shebang is present but file is not executable
   "FBT001",  # Boolean positional arg in function definition
@@ -85,3 +87,10 @@ ban-relative-imports = "all"
 
 [tool.ruff.mccabe]
 max-complexity = 10
+
+[tool.ruff.pylint]
+max-args = 5
+
+# [tool.ruff.pydocstyle]
+# # Use Google-style docstrings.
+# convention = "pep257"
