@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-from __future__ import annotations
-
 from deadnews_template_python import get_answer
 
 
