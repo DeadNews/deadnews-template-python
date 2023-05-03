@@ -53,10 +53,10 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            /opt/pipx
-            /opt/pipx_bin
+            /opt/pipx/venvs/poetry
+            /opt/pipx_bin/poetry
           key:
-            pipx-${{ hashFiles('requirements-ci.txt') }}
+            pipx-${{ matrix.os }}-${{ matrix.python-version }}-${{ hashFiles('requirements-ci.txt') }}
 
             # ${{ env.PIPX_HOME }}
             # ${{ env.PIPX_BIN_DIR }}
