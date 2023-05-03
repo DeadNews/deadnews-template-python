@@ -49,14 +49,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Install poetry
+        # run: pipx install poetry==${{ env.POETRY_VERSION }}
+        run: pip3 install -r requirements-ci.txt
+
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
           cache: poetry
-
-      - name: Install poetry
-        # run: pipx install poetry==${{ env.POETRY_VERSION }}
-        run: pip install -r requirements-ci.txt
 
       - name: Install dependencies
         run: |
