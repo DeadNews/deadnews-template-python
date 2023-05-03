@@ -53,8 +53,8 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            ${{ env.PIPX_HOME }}/venvs/poetry
-            ${{ env.PIPX_BIN_DIR }}/poetry
+            ${{ PIPX_HOME }}/venvs/poetry
+            ${{ PIPX_BIN_DIR }}/poetry
           key: pipx-${{ matrix.os }}-${{ matrix.python-version }}-${{ hashFiles('requirements-ci.txt') }}
 
       - name: Install poetry
