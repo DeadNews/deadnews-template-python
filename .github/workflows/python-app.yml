@@ -43,10 +43,15 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.9", "3.10", "3.11"]
+        python-version: ["3.10", "3.11"]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
+
+      - name: Test
+        run: |
+          echo $PIPX_HOME
+          echo $PIPX_BIN_DIR
 
       - name: Cache poetry runtime
         id: cache-runtime

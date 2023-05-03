@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Docstring."""
-from __future__ import annotations
 
 
 def get_answer() -> int:
