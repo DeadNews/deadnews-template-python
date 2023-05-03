@@ -52,12 +52,12 @@ jobs:
         id: cache-runtime
         uses: actions/cache@v3
         with:
-          path: ${{ env.pythonLocation }}
-          key: ${{ env.pythonLocation }}-${{ hashFiles('requirements-ci.txt') }}
+          path: ~/.local/pipx/
+          key: pipx-${{ hashFiles('requirements-ci.txt') }}
 
       - name: Install poetry
         if: steps.cache-runtime.outputs.cache-hit != 'true'
-        run: pip install -r requirements-ci.txt
+        run: pipx install -r requirements-ci.txt
 
       - name: Setup/Cache dependencies
         uses: actions/setup-python@v4
