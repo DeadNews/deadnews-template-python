@@ -48,16 +48,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Test
-        run: |
-          echo $PIPX_HOME
-          echo $PIPX_BIN_DIR
-
       - name: Cache poetry runtime
         id: cache-runtime
         uses: actions/cache@v3
         with:
-          path: ~/.local/pipx/
+          path: |
+            $PIPX_HOME
+            $PIPX_BIN_DIR
           key: pipx-${{ hashFiles('requirements-ci.txt') }}
 
       - name: Install poetry
