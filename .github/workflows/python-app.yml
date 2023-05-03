@@ -48,13 +48,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup poetry runtime
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
-          cache: pip
-          cache-dependency-path: requirements-ci.txt
-
       - name: Cache poetry runtime
         id: cache-runtime
         uses: actions/cache@v3
