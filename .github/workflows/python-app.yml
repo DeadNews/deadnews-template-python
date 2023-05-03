@@ -13,6 +13,7 @@ permissions:
 
 env:
   PYTHON_VERSION: "3.11"
+  POETRY_VERSION: "1.4.2"
 
 jobs:
   code-quality:
@@ -48,21 +49,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Cache poetry runtime
-        id: cache-runtime
-        uses: actions/cache@v3
-        with:
-          path: |
-            ${{ PIPX_HOME }}/venvs/poetry
-            ${{ PIPX_BIN_DIR }}/poetry
-          key: pipx-${{ matrix.os }}-${{ matrix.python-version }}-${{ hashFiles('requirements-ci.txt') }}
-
       - name: Install poetry
-        if: steps.cache-runtime.outputs.cache-hit != 'true'
-        run: pipx install poetry==1.4.2
+        # run: pipx install poetry==${{ env.POETRY_VERSION }}
+        run: pip install -r requirements-ci.txt
 
-      - name: Setup/Cache dependencies
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
           cache: poetry
