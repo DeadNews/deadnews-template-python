@@ -16,7 +16,7 @@ env:
   # renovate: datasource=pypi depName=poetry
   POETRY_VERSION: "1.4.2"
   # renovate: datasource=pypi depName=poetry-dynamic-versioning
-  POETRY_DVP_VERSION: "0.21.4"
+  POETRY_DV_VERSION: "0.21.4"
 
 jobs:
   code-quality:
@@ -85,7 +85,7 @@ jobs:
       - name: Install poetry
         run: |
           pipx install poetry==${{ env.POETRY_VERSION }}
-          poetry self add poetry-dynamic-versioning[plugin]==${{ env.POETRY_DVP_VERSION }}
+          pipx inject poetry poetry-dynamic-versioning[plugin]==${{ env.POETRY_DV_VERSION }}
 
       - uses: actions/setup-python@v4
         with:
