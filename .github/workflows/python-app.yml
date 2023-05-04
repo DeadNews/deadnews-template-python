@@ -15,7 +15,7 @@ env:
   PYTHON_VERSION: "3.11"
   # renovate: datasource=pypi depName=poetry
   POETRY_VERSION: "1.4.2"
-  # renovate: datasource=pypi depName=poetry-dynamic-versioning[plugin]
+  # renovate: datasource=pypi depName=poetry-dynamic-versioning
   POETRY_DVP_VERSION: "0.21.4"
 
 jobs:
