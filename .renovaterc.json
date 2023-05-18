@@ -1,7 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "automerge": true,
-  "automergeSchedule": ["every weekend"],
   "automergeStrategy": "squash",
   "commitMessageAction": "update",
   "dependencyDashboard": true,
@@ -21,5 +20,6 @@
   "pre-commit": {
     "enabled": true
   },
+  "schedule": ["every 1 months on the first day of the month"],
   "semanticCommits": "enabled"
 }
