@@ -13,6 +13,7 @@ permissions:
 
 jobs:
   code-quality:
+    name: Check code quality
     uses: ./.github/workflows/python-code-quality.yml
 
   run-tests:
@@ -40,8 +41,13 @@ jobs:
       - name: Run tests
         run: poetry run pytest --cov-report=xml
 
+  codecov:
+    needs: [run-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
       - name: Upload coverage to Codecov
-        if: matrix.os == 'ubuntu-latest'
         uses: codecov/codecov-action@v3
 
   publish-pypi:
