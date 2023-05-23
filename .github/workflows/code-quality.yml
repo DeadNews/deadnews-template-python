@@ -2,6 +2,10 @@ name: Check code quality
 
 on:
   workflow_call:
+    inputs:
+      setup-vapoursynth:
+        default: false
+        type: boolean
 
 jobs:
   code-quality:
@@ -9,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setup vapoursynth
+        if: ${{ inputs.setup-vapoursynth }}
+        uses: deadnews/setup-vapoursynth@main
 
       - name: Install poetry
         run: pipx install poetry
