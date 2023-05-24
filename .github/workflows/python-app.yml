@@ -1,4 +1,4 @@
-name: CI/CD
+name: Main
 
 on:
   push:
@@ -12,8 +12,8 @@ permissions:
   contents: read
 
 jobs:
-  code-quality:
-    name: Check code quality
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -28,11 +28,11 @@ jobs:
       - name: Install deps
         run: poetry install
 
-      - name: Check code quality
+      - name: Lint code
         run: poetry run poe ci
 
-  run-tests:
-    name: Run tests
+  tests:
+    name: Tests
     strategy:
       fail-fast: false
       matrix:
@@ -56,19 +56,14 @@ jobs:
       - name: Run tests
         run: poetry run pytest --cov-report=xml
 
-  codecov:
-    needs: [run-tests]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
       - name: Upload coverage to Codecov
+        if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.11'
         uses: codecov/codecov-action@v3
 
   publish-pypi:
     name: Build and release to PyPI
     if: github.event_name == 'release' && github.event.action == 'created'
-    needs: [code-quality, run-tests]
+    needs: [lint, tests]
     permissions:
       id-token: write
     runs-on: ubuntu-latest
@@ -86,4 +81,4 @@ jobs:
         run: poetry build
 
       - name: Publish package to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
+        uses: pypa/gh-action-pypi-publish@release/v1.8
