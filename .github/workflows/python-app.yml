@@ -39,8 +39,23 @@ jobs:
 
   publish-pypi:
     name: Build and release to PyPI
-    uses: ./.github/workflows/publish-pypi.yml
     if: github.event_name == 'release' && github.event.action == 'created'
     needs: [code-quality, run-tests]
     permissions:
       id-token: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install poetry
+        run: |
+          pipx install poetry
+          pipx inject poetry poetry-dynamic-versioning[plugin]
+
+      - uses: actions/setup-python@v4
+
+      - name: Build package
+        run: poetry build
+
+      - name: Publish package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
