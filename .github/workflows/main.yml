@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   lint:
-    name: Lint
+    name: Lint code
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -61,7 +61,7 @@ jobs:
         uses: codecov/codecov-action@v3
 
   publish-pypi:
-    name: Build and release to PyPI
+    name: Release to PyPI
     if: github.event_name == 'release' && github.event.action == 'created'
     needs: [lint, tests]
     permissions:
@@ -81,4 +81,4 @@ jobs:
         run: poetry build
 
       - name: Publish package to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1.8
+        uses: pypa/gh-action-pypi-publish@v1.8.6
