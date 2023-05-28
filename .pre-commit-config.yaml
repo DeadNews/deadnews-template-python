@@ -33,7 +33,7 @@ repos:
       - id: check-renovate
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: fbc96a6c25c4a03a3ab7cb6408b5852e739101b3 # v0.0.269
+    rev: 14b59ee3b18bd49d0816d1f36820c97110e780cc # v0.0.270
     hooks:
       - id: ruff
         args: [--fix]
