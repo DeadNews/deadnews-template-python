@@ -6,8 +6,8 @@
     {
       "fileMatch": ["(^|/)\\.pre-commit-config\\.ya?ml$"],
       "matchStrings": [
-        "repo: (?<depName>.{2,}?)\n\\s+rev: (?<currentValue>v?\\d+\\.\\d+\\.\\d+)\n",
-        "repo: (?<depName>.{2,}?)\n\\s+rev: (?<currentDigest>[a-z0-9]{40}|[a-z0-9]{64}) # (?<currentValue>v?\\d+\\.\\d+\\.\\d+)\n"
+        "repo: https?://(?<hostname>[^/]+)/(?<depName>\\S*)\n\\s+rev: (?<currentValue>v?\\d+\\.\\d+\\.\\d+)\n",
+        "repo: https?://(?<hostname>[^/]+)/(?<depName>\\S*)\n\\s+rev: (?<currentDigest>[a-z0-9]{40}|[a-z0-9]{64}) # (?<currentValue>v?\\d+\\.\\d+\\.\\d+)\n"
       ],
       "datasourceTemplate": "github-tags"
     }
