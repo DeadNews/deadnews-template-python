@@ -27,7 +27,7 @@ repos:
       - id: typos
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 241789d4437eeab1dae5b906440fdbd22e01b366 # 0.23.0
+    rev: fd9dcbefa7f0e094e02841e992489e8b9d394f8a # 0.23.1
     hooks:
       - id: check-github-workflows
       - id: check-renovate
