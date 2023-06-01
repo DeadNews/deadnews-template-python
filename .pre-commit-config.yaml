@@ -49,7 +49,7 @@ repos:
       - id: mypy
 
   - repo: https://github.com/python-poetry/poetry
-    rev: cacd43c076748411a759c65dd46858cd8b7ef3b3 # 1.5.0
+    rev: 68b88e5390720a3dd84f02940ec5200bfce39ac6 # 1.5.0
     hooks:
       - id: poetry-check
       - id: poetry-lock
