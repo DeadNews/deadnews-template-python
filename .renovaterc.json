@@ -1,15 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base", "github>DeadNews/renovate-config"],
-  "schedule": ["every 1 months on the first day of the month"],
-  "regexManagers": [
-    {
-      "fileMatch": ["(^|/)\\.pre-commit-config\\.ya?ml$"],
-      "matchStrings": [
-        "repo: https?://(?<hostname>[^/]+)/(?<depName>\\S*)\n\\s+rev: (?<currentValue>v?\\d+\\.\\d+\\.\\d+)\n",
-        "repo: https?://(?<hostname>[^/]+)/(?<depName>\\S*)\n\\s+rev: (?<currentDigest>[a-z0-9]{40}|[a-z0-9]{64}) # (?<currentValue>v?\\d+\\.\\d+\\.\\d+)\n"
-      ],
-      "datasourceTemplate": "github-tags"
-    }
-  ]
+  "schedule": ["every 1 months on the first day of the month"]
 }

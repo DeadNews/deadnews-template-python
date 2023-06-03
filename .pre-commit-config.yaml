@@ -5,7 +5,7 @@ ci:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: f71fa2c1f9cf5cb705f73dffe4b21f7c61470ba9 # v4.4.0
+    rev: v4.4.0
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
@@ -17,39 +17,39 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: 6fd1ced85fc139abd7f5ab4f3d78dab37592cd5e # v3.0.0-alpha.9-for-vscode
+    rev: v3.0.0-alpha.9-for-vscode
     hooks:
       - id: prettier
 
   - repo: https://github.com/crate-ci/typos
-    rev: 38a1b194811847c93a72ab95f06d55b33806a160 # v1.14.11
+    rev: v1.14.12
     hooks:
       - id: typos
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: fd9dcbefa7f0e094e02841e992489e8b9d394f8a # 0.23.1
+    rev: 0.23.1 # 0.23.1
     hooks:
       - id: check-github-workflows
       - id: check-renovate
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: 14b59ee3b18bd49d0816d1f36820c97110e780cc # v0.0.270
+    rev: v0.0.270
     hooks:
       - id: ruff
         args: [--fix]
 
   - repo: https://github.com/psf/black
-    rev: bf7a16254ec96b084a6caf3d435ec18f0f245cc7 # 23.3.0
+    rev: 23.3.0
     hooks:
       - id: black
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: bd424e49d4f0181d4c8b8909a8cd5ce9eb058044 # v1.3.0
+    rev: v1.3.0
     hooks:
       - id: mypy
 
   - repo: https://github.com/python-poetry/poetry
-    rev: 3fbd794ab8ab09bf99f90116c463996031b5544d # 1.5.1
+    rev: 1.5.1
     hooks:
       - id: poetry-check
       - id: poetry-lock
