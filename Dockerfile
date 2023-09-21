@@ -35,10 +35,10 @@ FROM base as runtime
 
 ENV PATH="/app/.venv/bin/:$PATH"
 
-COPY --from=py-builder /app/.venv ./.venv
-COPY --from=py-builder /app/dist .
+COPY --from=py-builder /app/.venv /app/.venv
+COPY --from=py-builder /app/dist /app/
 
-RUN pip install *.whl
+RUN pip install /app/*.whl
 
 USER guest
 HEALTHCHECK NONE
