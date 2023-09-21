@@ -1,0 +1,21 @@
+name: Docker
+
+on:
+  push:
+    branches: ["main"]
+    tags: ["v*.*.*"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  id-token: write
+  packages: write
+  security-events: write
+
+jobs:
+  docker:
+    name: Docker
+    uses: deadnews/deadnews-template-docker/.github/workflows/docker-reusable.yml@latest
+    with:
+      build-platforms: linux/amd64
