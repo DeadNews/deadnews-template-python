@@ -36,9 +36,9 @@ vcs = "git"
 style = "semver"
 
 [tool.poe.tasks]
-ruff = "ruff check ."
 black = "black --check ."
 mypy = "mypy ."
+ruff = "ruff check ."
 lint.sequence = ["ruff", "black", "mypy"]
 
 [tool.poe.tasks.test]
