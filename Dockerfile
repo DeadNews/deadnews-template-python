@@ -1,27 +1,42 @@
-FROM python:3.11@sha256:cc7372fe4746ca323f18c6bd0d45dadf22d192756abc5f73e39f9c7f10cba5aa AS python-builder
+FROM python:3.11-alpine@sha256:25df32b602118dab046b58f0fe920e3301da0727b5b07430c8bcd4b139627fdc as base
 LABEL maintainer "DeadNews <aurczpbgr@mozmail.com>"
+
+ENV PIP_NO_CACHE_DIR=1 \
+    PIP_DEFAULT_TIMEOUT=100 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    # Avoid to write .pyc files.
+    PYTHONDONTWRITEBYTECODE=1 \
+    # Allow messages to immediately appear.
+    PYTHONUNBUFFERED=1 \
+    # Tracebacks on segfaults.
+    PYTHONFAULTHANDLER=1
+
+WORKDIR /app
+
+FROM base as py-builder
 
 # renovate: datasource=pypi dep_name=poetry
 ENV POETRY_VERSION="1.6.1"
-# renovate: datasource=pypi dep_name=poetry-dynamic-versioning
-ENV DYNAMIC_VERSIONING_VERSION="1.0.1"
-ENV POETRY_VIRTUALENVS_IN_PROJECT=true
+ENV POETRY_VIRTUALENVS_IN_PROJECT=1 \
+    # Disable the dynamic versioning.
+    POETRY_DYNAMIC_VERSIONING_COMMANDS=""
 
-RUN pip install --no-cache-dir \
-    poetry==${POETRY_VERSION} \
-    poetry-dynamic-versioning[plugin]==${DYNAMIC_VERSIONING_VERSION}
+RUN pip install "poetry==${POETRY_VERSION}"
 
-WORKDIR /tmp/app
-COPY . ./
-RUN python -m poetry install --only main
+COPY pyproject.toml poetry.lock README.md src ./
+RUN poetry install --only=main --no-root && \
+    poetry build
 
-#
-FROM gcr.io/distroless/python3-debian11@sha256:5148968d8ae02a0f6d12efaca7a16e711ab43a4695a285e22dbbae70d6048937 AS final
-LABEL maintainer "DeadNews <aurczpbgr@mozmail.com>"
+FROM base as runtime
 
-COPY --from=python-builder /tmp/app/.venv /venv
+ENV PATH="/app/.venv/bin/:$PATH"
 
-USER nonroot:nonroot
+COPY --from=py-builder /app/.venv ./.venv
+COPY --from=py-builder /app/dist .
+
+RUN pip install *.whl
+
+USER guest
 HEALTHCHECK NONE
 
-ENTRYPOINT [ "/venv/bin/python", "-m", "deadnews_template_python" ]
+ENTRYPOINT [ "python", "-m", "deadnews_template_python" ]
