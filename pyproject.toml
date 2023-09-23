@@ -21,13 +21,13 @@ deadnews-template-python = "deadnews_template_python.__main__:get_answer"
 python = "^3.10"
 
 [tool.poetry.group.lint.dependencies]
-black = "^23.7.0"
+black = "^23.9.1"
 mypy = "^1.5.1"
-poethepoet = "^0.22.0"
-ruff = "^0.0.286"
+poethepoet = "^0.22.1"
+ruff = "^0.0.291"
 
 [tool.poetry.group.test.dependencies]
-pytest = "^7.4.0"
+pytest = "^7.4.2"
 pytest-cov = "^4.1.0"
 
 [tool.poetry-dynamic-versioning]
