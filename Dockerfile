@@ -41,6 +41,7 @@ COPY --from=py-builder /app/dist /app/
 RUN pip install /app/*.whl
 
 USER guest:users
-HEALTHCHECK NONE
+EXPOSE 1271
+HEALTHCHECK --interval=60s --timeout=3s CMD curl --fail http://127.0.0.1:1271/health || exit 1
 
 ENTRYPOINT [ "python", "-m", "deadnews_template_python" ]

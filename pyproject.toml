@@ -15,21 +15,26 @@ keywords = ["python", "template", "layout"]
 classifiers = ["Operating System :: OS Independent"]
 
 [tool.poetry.scripts]
-deadnews-template-python = "deadnews_template_python.__main__:get_answer"
+deadnews-template-python = "deadnews_template_python.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+fastapi = "^0.103.1"
+pydantic = "^2.4.2"
+starlette = "^0.27.0"
+uvicorn = { version = "^0.23.2", extras = ["standard"] }
 
 [tool.poetry.group.lint.dependencies]
 black = "^23.9.1"
 mypy = "^1.5.1"
 poethepoet = "^0.22.0"
-pyright = "^1.1.327"
-ruff = "^0.0.286"
+pyright = "^1.1.329"
+ruff = "^0.0.291"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.2"
 pytest-cov = "^4.1.0"
+httpx = "^0.22.0"
 
 [tool.poetry-dynamic-versioning]
 enable = true
@@ -97,3 +102,6 @@ allow-dict-calls-with-keyword-arguments = false
 
 [tool.ruff.flake8-tidy-imports]
 ban-relative-imports = "all"
+
+[tool.ruff.pydocstyle]
+convention = "google"
