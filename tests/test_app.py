@@ -3,8 +3,7 @@ import random
 from typing import TYPE_CHECKING
 
 import pytest
-from deadnews_template_python._main import app
-from deadnews_template_python.app import HEALTH, HELLO_WORLD, ITEMS
+from deadnews_template_python.app import HEALTH, HELLO_WORLD, ITEMS, app
 from starlette import status
 from starlette.testclient import TestClient
 
