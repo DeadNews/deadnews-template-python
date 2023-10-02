@@ -31,7 +31,7 @@ def test_read_health(client: TestClient) -> None:
     assert response.json() == HEALTH
 
 
-def test_read_items(client: TestClient) -> None:
+def test_read_item_existing(client: TestClient) -> None:
     key, value = random.choice(list(ITEMS.items()))
 
     response: Response = client.get(f"/items/{key}")
@@ -40,7 +40,8 @@ def test_read_items(client: TestClient) -> None:
     assert response.json() == value
 
 
-def test_error(client: TestClient) -> None:
-    response: Response = client.get("/error")
+def test_read_item_non_existing(client: TestClient) -> None:
+    response: Response = client.get("/items/non_existing_item")
 
-    assert response.status_code == status.HTTP_500_INTERNAL_SERVER_ERROR
+    assert response.status_code == status.HTTP_404_NOT_FOUND
+    assert "Item not found." in response.text

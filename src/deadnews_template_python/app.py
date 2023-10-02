@@ -6,7 +6,7 @@ app = FastAPI()
 
 HELLO_WORLD: dict[str, str] = {"msg": "Hello World!"}
 HEALTH: dict[str, str] = {"status": "OK"}
-ITEMS: dict[str, str] = {"1": "sausage", "2": "ham", "3": "tofu"}
+ITEMS: dict[str, str] = {"1": "sausage", "2": "tofu"}
 
 
 @app.get("/")
@@ -24,18 +24,18 @@ def read_health() -> dict[str, str]:
 @app.get("/items/{item_id}")
 def read_item(item_id: str) -> str:
     """
-    Handles the "/items/{item_id}" route and returns an HTML response.
+    Handles the "/items/{item_id}" route and returns the corresponding value as an HTML response.
 
     Args:
         item_id (str): The ID of the item to retrieve from the ITEMS dictionary.
 
     Returns:
         str: The corresponding value from the ITEMS dictionary as a string.
+
+    Raises:
+        HTTPException: If the item_id is not found in the ITEMS dictionary, raise an HTTPException with a status code of 404.
     """
-    return ITEMS[item_id]
+    if item_id in ITEMS:
+        return ITEMS[item_id]
 
-
-@app.get("/error")
-def error() -> None:
-    """Raises an HTTP_500_INTERNAL_SERVER_ERROR."""
-    raise HTTPException(status_code=500, detail="Just throwing an internal server error.")
+    raise HTTPException(status_code=404, detail="Item not found.")

@@ -18,7 +18,7 @@ classifiers = ["Operating System :: OS Independent"]
 deadnews-template-python = "deadnews_template_python.__main__:main"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
 fastapi = "^0.103.1"
 pydantic = "^2.4.2"
 starlette = "^0.27.0"
@@ -29,7 +29,7 @@ black = "^23.9.1"
 mypy = "^1.5.1"
 poethepoet = "^0.22.0"
 pyright = "^1.1.329"
-ruff = "^0.0.291"
+ruff = "^0.0.292"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.2"
@@ -80,7 +80,7 @@ allow_untyped_defs = true
 
 [tool.ruff]
 line-length = 99
-target-version = "py310" # until poetry v2
+target-version = "py311" # until poetry v2
 select = ["ALL"]
 ignore = [
   "COM812",  # Trailing comma missing
