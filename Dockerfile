@@ -20,8 +20,8 @@ ENV POETRY_VIRTUALENVS_IN_PROJECT=1 \
     # Disable the dynamic versioning.
     POETRY_DYNAMIC_VERSIONING_COMMANDS="" \
     # Maunt as dedicated RUN cache.
-    POETRY_CACHE_DIR=\cache\poetry \
-    PIP_CACHE_DIR=\cache\pip
+    POETRY_CACHE_DIR="\cache\poetry" \
+    PIP_CACHE_DIR="\cache\pip"
 
 RUN --mount=type=cache,target=${PIP_CACHE_DIR} \
     pip install "poetry==${POETRY_VERSION}"
