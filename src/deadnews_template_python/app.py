@@ -24,7 +24,7 @@ def read_health() -> dict[str, str]:
 @app.get("/items/{item_id}")
 def read_item(item_id: str) -> str:
     """
-    Handles the "/items/{item_id}" route and returns the corresponding value as an HTML response.
+    Handles the "/items/{item_id}" route and returns the corresponding value as a JSON response.
 
     Args:
         item_id (str): The ID of the item to retrieve from the ITEMS dictionary.

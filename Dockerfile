@@ -1,4 +1,4 @@
-FROM python:3.12.0-alpine@sha256:ae35274f417fc81ba6ee1fc84206e8517f28117566ee6a04a64f004c1409bdac as base
+FROM python:3.11.6-alpine@sha256:3e73c0b6c1f0205225359acac5c8ab1852e7281248d72afda3e1bb8c6f47deab as base
 LABEL maintainer "DeadNews <aurczpbgr@mozmail.com>"
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
@@ -33,7 +33,9 @@ RUN --mount=type=cache,target=${POETRY_CACHE_DIR} \
 
 FROM base as runtime
 
-ENV PATH="/app/.venv/bin/:$PATH"
+ENV PATH="/app/.venv/bin/:$PATH" \
+    UVICORN_HOST=0.0.0.0 \
+    UVICORN_PORT=8000
 
 COPY --from=py-builder /app/.venv /app/.venv
 COPY --from=py-builder /app/dist /app/
@@ -41,7 +43,8 @@ COPY --from=py-builder /app/dist /app/
 RUN pip install /app/*.whl
 
 USER guest:users
-EXPOSE 1271
-HEALTHCHECK --interval=60s --timeout=3s CMD curl --fail http://127.0.0.1:1271/health || exit 1
+EXPOSE ${UVICORN_PORT}
+HEALTHCHECK --interval=60s --timeout=3s \
+     CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:${UVICORN_PORT}/health || exit 1
 
-ENTRYPOINT [ "python", "-m", "deadnews_template_python" ]
+CMD [ "python", "-m", "uvicorn", "deadnews_template_python.app:app" ]
