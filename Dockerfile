@@ -33,9 +33,9 @@ RUN --mount=type=cache,target=${POETRY_CACHE_DIR} \
 
 FROM base as runtime
 
-ENV PATH="/app/.venv/bin/:$PATH" \
+ENV UVICORN_PORT=8000 \
     UVICORN_HOST=0.0.0.0 \
-    UVICORN_PORT=8000
+    PATH="/app/.venv/bin/:$PATH"
 
 COPY --from=py-builder /app/.venv /app/.venv
 COPY --from=py-builder /app/dist /app/

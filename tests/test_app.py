@@ -36,7 +36,7 @@ def test_read_item_existing(client: TestClient) -> None:
     response: Response = client.get(f"/items/{key}")
 
     assert response.status_code == status.HTTP_200_OK
-    assert response.json() == value
+    assert response.json() == {"item": value}
 
 
 def test_read_item_non_existing(client: TestClient) -> None:
