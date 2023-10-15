@@ -21,14 +21,13 @@ deadnews-template-python = "deadnews_template_python.__main__:main"
 python = "^3.11"
 fastapi = "^0.103.1"
 pydantic = "^2.4.2"
-starlette = "^0.27.0"
 uvicorn = { version = "^0.23.2", extras = ["standard"] }
 
 [tool.poetry.group.lint.dependencies]
 black = "^23.9.1"
-mypy = "^1.5.1"
+mypy = "^1.6.0"
 poethepoet = "^0.22.0"
-pyright = "^1.1.329"
+pyright = "^1.1.331"
 ruff = "^0.0.292"
 
 [tool.poetry.group.test.dependencies]
