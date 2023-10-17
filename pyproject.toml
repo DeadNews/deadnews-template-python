@@ -24,11 +24,11 @@ pydantic = "^2.4.2"
 uvicorn = { version = "^0.23.2", extras = ["standard"] }
 
 [tool.poetry.group.lint.dependencies]
-black = "^23.9.1"
+black = "^23.10.0"
 mypy = "^1.6.0"
-poethepoet = "^0.22.0"
+poethepoet = "^0.24.1"
 pyright = "^1.1.331"
-ruff = "^0.0.292"
+ruff = "^0.1.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.2"
