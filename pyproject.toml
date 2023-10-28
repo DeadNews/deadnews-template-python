@@ -24,14 +24,13 @@ pydantic = "^2.4.2"
 uvicorn = { version = "^0.23.2", extras = ["standard"] }
 
 [tool.poetry.group.lint.dependencies]
-black = "^23.10.0"
 mypy = "^1.6.1"
 poethepoet = "^0.24.1"
-pyright = "^1.1.332"
+pyright = "^1.1.333"
 ruff = "^0.1.1"
 
 [tool.poetry.group.test.dependencies]
-pytest = "^7.4.2"
+pytest = "^7.4.3"
 pytest-cov = "^4.1.0"
 httpx = "^0.25.0"
 
@@ -41,11 +40,10 @@ vcs = "git"
 style = "semver"
 
 [tool.poe.tasks]
-black = "black --check ."
-mypy = "mypy ."
-pyright = "pyright ."
 ruff = "ruff check ."
-lint.sequence = ["ruff", "black", "mypy"]
+ruff-format = "ruff format ."
+mypy = "mypy ."
+lint.sequence = ["ruff", "ruff-format", "mypy"]
 
 [tool.poe.tasks.test]
 cmd = "pytest --cov-report=xml"
@@ -62,9 +60,6 @@ exclude_lines = [
   "if TYPE_CHECKING:",
 ]
 
-[tool.black]
-line-length = 99
-
 [tool.mypy]
 disallow_untyped_defs = true
 follow_imports = "silent"
@@ -80,6 +75,11 @@ allow_untyped_defs = true
 [tool.ruff]
 line-length = 99
 target-version = "py311" # until poetry v2
+
+[tool.ruff.format]
+line-ending = "lf"
+
+[tool.ruff.lint]
 select = ["ALL"]
 ignore = [
   "COM812",  # Trailing comma missing
@@ -89,6 +89,7 @@ ignore = [
   "EXE001",  # Shebang is present but file is not executable
   "FBT001",  # Boolean positional arg in function definition
   "FBT002",  # Boolean default value in function definition
+  "ISC001",  # Checks for implicitly concatenated strings on a single line.
   "PLR0913", # Too many arguments to function call
 ]
 
