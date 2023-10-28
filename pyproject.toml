@@ -40,9 +40,10 @@ vcs = "git"
 style = "semver"
 
 [tool.poe.tasks]
+mypy = "mypy ."
+pyright = "pyright ."
 ruff = "ruff check ."
 ruff-format = "ruff format ."
-mypy = "mypy ."
 lint.sequence = ["ruff", "ruff-format", "mypy"]
 
 [tool.poe.tasks.test]

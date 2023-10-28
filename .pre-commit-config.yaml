@@ -45,11 +45,6 @@ repos:
       - id: ruff
         args: [--fix]
 
-  - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 23.10.0
-    hooks:
-      - id: black
-
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.6.1
     hooks:
