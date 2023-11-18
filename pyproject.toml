@@ -24,15 +24,15 @@ pydantic = "^2.4.2"
 uvicorn = { version = "^0.24.0", extras = ["standard"] }
 
 [tool.poetry.group.lint.dependencies]
-mypy = "^1.6.1"
-poethepoet = "^0.24.1"
-pyright = "^1.1.333"
-ruff = "^0.1.1"
+mypy = "^1.7.0"
+poethepoet = "^0.24.3"
+pyright = "^1.1.336"
+ruff = "^0.1.6"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.3"
 pytest-cov = "^4.1.0"
-httpx = "^0.25.0"
+httpx = "^0.25.1"
 
 [tool.poetry-dynamic-versioning]
 enable = true
