@@ -25,7 +25,7 @@ uvicorn = { version = "^0.24.0", extras = ["standard"] }
 
 [tool.poetry.group.lint.dependencies]
 mypy = "^1.7.0"
-poethepoet = "^0.24.3"
+poethepoet = "^0.24.4"
 pyright = "^1.1.336"
 ruff = "^0.1.6"
 
