@@ -19,7 +19,7 @@ deadnews-template-python = "deadnews_template_python.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-fastapi = "^0.104.0"
+fastapi = "^0.105.0"
 pydantic = "^2.4.2"
 uvicorn = { version = "^0.24.0", extras = ["standard"] }
 
