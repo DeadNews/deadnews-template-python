@@ -1,3 +1,5 @@
+.PHONY: install test
+
 install:
 	poetry install --sync
 
@@ -7,14 +9,14 @@ lint:
 test:
 	poetry run pytest
 
-poetry-up:
-	poetry up --latest
+pc-run:
+	pre-commit run -a
 
-pre-commit-install:
+pc-install:
 	pre-commit install
 
-pre-commit-up:
+pc-up:
 	pre-commit autoupdate
 
-pre-commit-run:
-	pre-commit run -a
+poetry-up:
+	poetry up --latest
