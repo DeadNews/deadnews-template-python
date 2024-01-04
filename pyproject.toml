@@ -20,17 +20,17 @@ deadnews-template-python = "deadnews_template_python.__main__:main"
 [tool.poetry.dependencies]
 python = "^3.11"
 fastapi = "^0.108.0"
-pydantic = "^2.4.2"
+pydantic = "^2.5.3"
 uvicorn = { version = "^0.25.0", extras = ["standard"] }
 
 [tool.poetry.group.lint.dependencies]
 mypy = "^1.8.0"
 poethepoet = "^0.24.4"
-pyright = "^1.1.342"
+pyright = "^1.1.344"
 ruff = "^0.1.9"
 
 [tool.poetry.group.test.dependencies]
-pytest = "^7.4.3"
+pytest = "^7.4.4"
 pytest-cov = "^4.1.0"
 httpx = "^0.26.0"
 
@@ -63,7 +63,7 @@ exclude_lines = [
 
 [tool.mypy]
 disallow_untyped_defs = true
-follow_imports = "silent"
+follow_imports = "normal"
 ignore_missing_imports = true
 show_column_numbers = true
 show_error_codes = true
@@ -71,11 +71,11 @@ warn_unused_ignores = true
 
 [[tool.mypy.overrides]]
 module = ["tests.*"]
-allow_untyped_defs = true
+disallow_untyped_defs = false
 
 [tool.ruff]
 line-length = 99
-target-version = "py311" # until poetry v2
+target-version = "py311" # Until Poetry v2
 
 [tool.ruff.format]
 line-ending = "lf"
@@ -106,3 +106,6 @@ ban-relative-imports = "all"
 
 [tool.ruff.pydocstyle]
 convention = "google"
+
+[tool.ruff.pycodestyle]
+max-doc-length = 129
