@@ -15,8 +15,5 @@ pc-run:
 pc-install:
 	pre-commit install
 
-pc-up:
-	pre-commit autoupdate
-
 poetry-up:
 	poetry up --latest
