@@ -27,7 +27,7 @@ uvicorn = { version = "^0.25.0", extras = ["standard"] }
 mypy = "^1.8.0"
 poethepoet = "^0.24.4"
 pyright = "^1.1.344"
-ruff = "^0.1.9"
+ruff = "^0.1.11"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.4"
