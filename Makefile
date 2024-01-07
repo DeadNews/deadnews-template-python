@@ -8,9 +8,6 @@ install:
 pc-install:
 	pre-commit install
 
-update:
-	poetry update
-
 update-latest:
 	poetry up --latest
 
@@ -23,4 +20,12 @@ lint:
 	poetry run poe lint
 
 test:
-	poetry run pytest
+	poetry run poe test
+
+docker: compose-up
+
+compose-up:
+	docker compose up --build
+
+compose-down:
+	docker compose down
