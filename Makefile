@@ -1,4 +1,4 @@
-.PHONY: test
+.PHONY: all clean test checks docker
 
 install-all: install pc-install
 
@@ -29,3 +29,6 @@ compose-up:
 
 compose-down:
 	docker compose down
+
+run-reload:
+	poetry run uvicorn --reload deadnews_template_python.app:app
