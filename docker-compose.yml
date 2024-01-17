@@ -3,6 +3,7 @@ services:
   web:
     build: .
     ports:
-      - 127.0.0.1:8080:8080
+      - 127.0.0.1:${UVICORN_PORT}:${UVICORN_PORT}
     environment:
-      UVICORN_PORT: "8080"
+      # Set via .env
+      UVICORN_PORT: ${UVICORN_PORT}
