@@ -21,7 +21,7 @@ deadnews-template-python = "deadnews_template_python.__main__:main"
 python = "^3.11"
 fastapi = "^0.109.0"
 pydantic = "^2.5.3"
-uvicorn = { version = "^0.26.0", extras = ["standard"] }
+uvicorn = { version = "^0.27.0", extras = ["standard"] }
 
 [tool.poetry.group.lint.dependencies]
 mypy = "^1.8.0"
