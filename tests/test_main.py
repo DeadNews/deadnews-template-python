@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from deadnews_template_python.__main__ import main
 
 

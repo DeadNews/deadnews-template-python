@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import random
 from typing import TYPE_CHECKING
 

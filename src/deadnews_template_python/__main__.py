@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """Entrypoint for app, enables execution with `python -m deadnews_template_python`."""
 import uvicorn
 

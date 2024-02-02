@@ -44,7 +44,7 @@ repos:
       - id: checkmake
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.13
+    rev: v0.2.0
     hooks:
       - id: ruff-format
       - id: ruff
@@ -59,8 +59,7 @@ repos:
     rev: 1.7.1
     hooks:
       - id: poetry-check
-      - id: poetry-lock
-        args: [--check]
+        args: [--lock]
 
   - repo: https://github.com/hadolint/hadolint
     rev: v2.12.0
