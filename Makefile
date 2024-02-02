@@ -22,6 +22,9 @@ lint:
 test:
 	poetry run poe test
 
+pyright:
+	poetry run poe pyright
+
 docker: compose-up
 
 compose-up:
