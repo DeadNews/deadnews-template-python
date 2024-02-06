@@ -14,7 +14,7 @@ def read_root() -> dict[str, str]:
     return HELLO_WORLD
 
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 def read_health() -> dict[str, str]:
     """Handles the "/health" route and returns a JSON response."""
     return HEALTH

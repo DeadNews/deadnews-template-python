@@ -1,4 +1,4 @@
-FROM python:3.12.1-alpine@sha256:14cfc61fc2404da8adc7b1cb1fcb299aefafab22ae571f652527184fbb21ce69 as base
+FROM pypy:3.10-slim@sha256:e074587f4ae78a735969c2fdedeacf2905c6116e8daefddabe18726ffc273327 as base
 LABEL maintainer "DeadNews <aurczpbgr@mozmail.com>"
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
@@ -26,6 +26,11 @@ ENV POETRY_VIRTUALENVS_IN_PROJECT=1 \
 RUN --mount=type=cache,target=${PIP_CACHE_DIR} \
     pip install "poetry==${POETRY_VERSION}"
 
+# hadolint ignore=DL3008
+RUN --mount=type=cache,target="/var/cache/" \
+    --mount=type=cache,target="/var/lib/apt/lists/" \
+    apt-get update && apt-get install --no-install-recommends -y gcc
+
 COPY pyproject.toml poetry.lock README.md src ./
 RUN --mount=type=cache,target=${POETRY_CACHE_DIR} \
     poetry install --only=main --no-root && \
@@ -42,7 +47,7 @@ COPY --from=py-builder /app/dist/*.whl /app/
 
 RUN pip install /app/*.whl
 
-USER guest:users
+USER nobody:nogroup
 EXPOSE ${UVICORN_PORT}
 HEALTHCHECK --interval=60s --timeout=3s \
     CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:${UVICORN_PORT}/health || exit 1
