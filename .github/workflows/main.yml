@@ -37,7 +37,12 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.11", "3.12", "pypy3.10", "graalpy-23.1"]
+        python-version: ["3.11", "3.12"]
+        include:
+          - os: ubuntu-latest
+            python-version: pypy3.10
+          - os: ubuntu-latest
+            python-version: graalpy-23.1
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
