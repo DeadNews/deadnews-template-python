@@ -1,4 +1,5 @@
 ignored:
   - DL3008 # Pin versions in apt-get install.
   - DL3018 # Pin versions in apk add.
+  - DL3019 # Use the --no-cache switch in apk add.
   - DL3042 # Avoid use of cache directory with pip.

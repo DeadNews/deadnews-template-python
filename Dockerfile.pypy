@@ -1,4 +1,4 @@
-FROM python:3.12.2-alpine@sha256:1a0501213b470de000d8432b3caab9d8de5489e9443c2cc7ccaa6b0aa5c3148e as base
+FROM pypy:3.10-slim@sha256:41f5d56ab6ebb483a73c047622e98f511173f209ad05358cd1da0d3b40874ec9 as base
 LABEL maintainer "DeadNews <aurczpbgr@mozmail.com>"
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
@@ -27,10 +27,10 @@ ENV POETRY_VIRTUALENVS_IN_PROJECT=1 \
 RUN --mount=type=cache,target=${PIP_CACHE_DIR} \
     pip install "poetry==${POETRY_VERSION}"
 
-# Install gcc for building wheels. Alpine.
+# Install gcc for building wheels. Debian.
 RUN --mount=type=cache,target="/var/cache/" \
-    --mount=type=cache,target="/var/lib/apk/" \
-    apk add gcc
+    --mount=type=cache,target="/var/lib/apt/lists/" \
+    apt-get update && apt-get install -y --no-install-recommends gcc
 
 # Install dependencies and build wheels.
 COPY pyproject.toml poetry.lock README.md src ./
@@ -49,7 +49,7 @@ COPY --from=py-builder /app/dist/*.whl /app/
 
 RUN pip install /app/*.whl
 
-USER guest:users
+USER nobody:nogroup
 EXPOSE ${UVICORN_PORT}
 HEALTHCHECK --interval=60s --timeout=3s \
     CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:${UVICORN_PORT}/health || exit 1

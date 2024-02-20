@@ -22,6 +22,6 @@ jobs:
     name: Docker PyPy
     uses: deadnews/deadnews-template-docker/.github/workflows/docker-reusable.yml@latest
     with:
-      build-args: BASE_IMAGE=pypy:3.10-slim@sha256:41f5d56ab6ebb483a73c047622e98f511173f209ad05358cd1da0d3b40874ec9
+      dockerfile: Dockerfile.pypy
       flavor: |
         suffix=-pypy
