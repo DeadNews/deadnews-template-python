@@ -1,4 +1,7 @@
-FROM python:3.12.2-alpine@sha256:1a0501213b470de000d8432b3caab9d8de5489e9443c2cc7ccaa6b0aa5c3148e as base
+ARG BASE_IMAGE=python:3.12.2-alpine@sha256:1a0501213b470de000d8432b3caab9d8de5489e9443c2cc7ccaa6b0aa5c3148e
+
+# hadolint ignore=DL3006
+FROM ${BASE_IMAGE} as base
 LABEL maintainer "DeadNews <aurczpbgr@mozmail.com>"
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
@@ -23,9 +26,19 @@ ENV POETRY_VIRTUALENVS_IN_PROJECT=1 \
     POETRY_CACHE_DIR="/cache/poetry" \
     PIP_CACHE_DIR="/cache/pip"
 
+# Install poetry.
 RUN --mount=type=cache,target=${PIP_CACHE_DIR} \
     pip install "poetry==${POETRY_VERSION}"
 
+# Install gcc in alpine or debian for building wheels.
+RUN --mount=type=cache,target="/var/cache/" \
+    --mount=type=cache,target="/var/lib/apk/" \
+    --mount=type=cache,target="/var/lib/apt/lists/" \
+    command -v apt-get && apt-get update && apt-get install -y gcc \
+    || command -v apk && apk add gcc \
+    || true
+
+# Install dependencies and build wheels.
 COPY pyproject.toml poetry.lock README.md src ./
 RUN --mount=type=cache,target=${POETRY_CACHE_DIR} \
     poetry install --only=main --no-root && \
