@@ -25,3 +25,4 @@ jobs:
       dockerfile: Dockerfile.pypy
       flavor: |
         suffix=-pypy
+        latest=false
