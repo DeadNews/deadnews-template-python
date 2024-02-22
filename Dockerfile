@@ -23,9 +23,16 @@ ENV POETRY_VIRTUALENVS_IN_PROJECT=1 \
     POETRY_CACHE_DIR="/cache/poetry" \
     PIP_CACHE_DIR="/cache/pip"
 
+# Install poetry.
 RUN --mount=type=cache,target=${PIP_CACHE_DIR} \
     pip install "poetry==${POETRY_VERSION}"
 
+# Install gcc for building wheels. Alpine.
+RUN --mount=type=cache,target="/var/cache/" \
+    --mount=type=cache,target="/var/lib/apk/" \
+    apk add gcc
+
+# Install dependencies and build wheels.
 COPY pyproject.toml poetry.lock README.md src ./
 RUN --mount=type=cache,target=${POETRY_CACHE_DIR} \
     poetry install --only=main --no-root && \
