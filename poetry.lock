@@ -406,13 +406,13 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "poethepoet"
-version = "0.24.4"
+version = "0.25.0"
 description = "A task runner that works well with poetry."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "poethepoet-0.24.4-py3-none-any.whl", hash = "sha256:fb4ea35d7f40fe2081ea917d2e4102e2310fda2cde78974050ca83896e229075"},
-    {file = "poethepoet-0.24.4.tar.gz", hash = "sha256:ff4220843a87c888cbcb5312c8905214701d0af60ac7271795baa8369b428fef"},
+    {file = "poethepoet-0.25.0-py3-none-any.whl", hash = "sha256:42c0fd654f23e1b7c67aa8aa395c72e15eb275034bd5105171003daf679c1470"},
+    {file = "poethepoet-0.25.0.tar.gz", hash = "sha256:ca8f1d8475aa10d2ceeb26331d2626fc4a6b51df1e7e70d3d0d6481a984faab6"},
 ]
 
 [package.dependencies]
@@ -552,13 +552,13 @@ dev = ["twine (>=3.4.1)"]
 
 [[package]]
 name = "pytest"
-version = "8.0.1"
+version = "8.0.2"
 description = "pytest: simple powerful testing with Python"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pytest-8.0.1-py3-none-any.whl", hash = "sha256:3e4f16fe1c0a9dc9d9389161c127c3edc5d810c38d6793042fb81d9f48a59fca"},
-    {file = "pytest-8.0.1.tar.gz", hash = "sha256:267f6563751877d772019b13aacbe4e860d73fe8f651f28112e9ac37de7513ae"},
+    {file = "pytest-8.0.2-py3-none-any.whl", hash = "sha256:edfaaef32ce5172d5466b5127b42e0d6d35ebbe4453f0e3505d96afd93f6b096"},
+    {file = "pytest-8.0.2.tar.gz", hash = "sha256:d4051d623a2e0b7e51960ba963193b09ce6daeb9759a451844a21e4ddedfc1bd"},
 ]
 
 [package.dependencies]
@@ -997,4 +997,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "9db535cff416db10806c3bdeed8144928b000dd71466ede2ba1047fd81455d0b"
+content-hash = "ee58580d2b4ddcdd476da8f084301da35d7a3e445b408712acbc8a2495b7131c"
