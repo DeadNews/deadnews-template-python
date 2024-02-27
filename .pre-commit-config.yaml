@@ -34,7 +34,7 @@ repos:
       - id: check-renovate
 
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.6.26
+    rev: v1.6.27
     hooks:
       - id: actionlint
 
@@ -56,7 +56,7 @@ repos:
       - id: mypy
 
   - repo: https://github.com/python-poetry/poetry
-    rev: 1.7.1
+    rev: 1.8.1
     hooks:
       - id: poetry-check
         args: [--lock]
