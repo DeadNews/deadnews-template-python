@@ -26,8 +26,8 @@ uvicorn = { version = "^0.27.0", extras = ["standard"] }
 [tool.poetry.group.lint.dependencies]
 mypy = "^1.8.0"
 poethepoet = "^0.25.0"
-pyright = "^1.1.351"
-ruff = "^0.2.2"
+pyright = "^1.1.352"
+ruff = "^0.3.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.0.2"
