@@ -1,4 +1,5 @@
 """Minimal FastAPI application."""
+
 from fastapi import FastAPI, HTTPException
 
 app = FastAPI()
