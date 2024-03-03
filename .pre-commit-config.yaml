@@ -2,7 +2,6 @@ ci:
   autofix_commit_msg: "chore: auto fixes from `pre-commit` hooks"
   autoupdate_commit_msg: "chore(pre-commit): autoupdate"
   autoupdate_schedule: quarterly
-  skip: [hadolint-docker]
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -61,7 +60,7 @@ repos:
       - id: poetry-check
         args: [--lock]
 
-  - repo: https://github.com/hadolint/hadolint
+  - repo: https://github.com/aleksac/hadolint-py
     rev: v2.12.0
     hooks:
-      - id: hadolint-docker
+      - id: hadolint
