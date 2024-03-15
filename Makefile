@@ -22,6 +22,9 @@ lint:
 test:
 	poetry run poe test
 
+docs-serve:
+	poetry run mkdocs serve
+
 docker: compose-up
 
 compose-up:

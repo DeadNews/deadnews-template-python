@@ -11,19 +11,19 @@ ITEMS: dict[str, str] = {"1": "sausage", "2": "tofu"}
 
 @app.get("/")
 def read_root() -> dict[str, str]:
-    """Handles the "/" route and returns a JSON response."""
+    """Handles the `/` route and returns a JSON response."""
     return HELLO_WORLD
 
 
 @app.api_route("/health", methods=["GET", "HEAD"])
 def read_health() -> dict[str, str]:
-    """Handles the "/health" route and returns a JSON response."""
+    """Handles the `/health` route and returns a JSON response."""
     return HEALTH
 
 
 @app.get("/items/{item_id}")
 def read_item(item_id: str) -> dict[str, str]:
-    """Handles the "/items/{item_id}" route and returns the corresponding value as a JSON response.
+    """Handles the `/items/{item_id}` route and returns the corresponding value as a JSON response.
 
     Args:
         item_id: The ID of the item to retrieve from the ITEMS dictionary.
