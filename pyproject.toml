@@ -11,6 +11,7 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/DeadNews/deadnews-template-python"
 repository = "https://github.com/DeadNews/deadnews-template-python"
+documentation = "https://deadnews.github.io/deadnews-template-python"
 keywords = ["python", "template", "layout"]
 classifiers = ["Operating System :: OS Independent"]
 
