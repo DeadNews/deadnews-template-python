@@ -1,4 +1,4 @@
-.PHONY: all clean test checks docker
+.PHONY: all clean test checks docs run
 
 install-all: install pc-install
 
@@ -22,16 +22,8 @@ lint:
 test:
 	poetry run poe test
 
-docs-serve:
+docs:
 	poetry run mkdocs serve
 
-docker: compose-up
-
-compose-up:
-	docker compose up --build
-
-compose-down:
-	docker compose down
-
-run-reload:
-	poetry run uvicorn --reload deadnews_template_python.app:app
+run:
+	poetry run uvicorn --reload deadnews_template_python:app
