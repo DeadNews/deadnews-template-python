@@ -5,6 +5,7 @@ edit_uri: blob/main/docs/
 nav:
   - Overview: index.md
   # defer to gen-files + literate-nav
+  - OpenAPI UI: openapi.md
   - API reference: reference/
 
 watch:
@@ -48,9 +49,11 @@ markdown_extensions:
 
 plugins:
   - search
+  - swagger-ui-tag
   - gen-files:
       scripts:
         - docs/scripts/gen_ref_nav.py
+        - docs/scripts/gen_openapi.py
   - literate-nav:
       nav_file: SUMMARY.md
   - mkdocstrings:

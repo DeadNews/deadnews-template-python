@@ -3,10 +3,13 @@
 
 import importlib
 import json
-from pathlib import Path
+
+import mkdocs_gen_files
 
 app = importlib.import_module("deadnews_template_python").app
-docs = Path(__file__).parent.parent
 
-with Path(docs / "openapi.json").open("w") as f:
-    json.dump(app.openapi(), f, indent=2)
+with mkdocs_gen_files.open("openapi.json", "w") as fd:
+    json.dump(app.openapi(), fd, indent=2)
+
+with mkdocs_gen_files.open("openapi.md", "w") as fd:
+    fd.write('<swagger-ui src="./openapi.json"/>\n')

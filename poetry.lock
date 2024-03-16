@@ -48,6 +48,27 @@ files = [
 dev = ["freezegun (>=1.0,<2.0)", "pytest (>=6.0)", "pytest-cov"]
 
 [[package]]
+name = "beautifulsoup4"
+version = "4.12.3"
+description = "Screen-scraping library"
+optional = false
+python-versions = ">=3.6.0"
+files = [
+    {file = "beautifulsoup4-4.12.3-py3-none-any.whl", hash = "sha256:b80878c9f40111313e55da8ba20bdba06d8fa3969fc68304167741bbf9e082ed"},
+    {file = "beautifulsoup4-4.12.3.tar.gz", hash = "sha256:74e3d1928edc070d21748185c46e3fb33490f22f52a3addee9aee0f4f7781051"},
+]
+
+[package.dependencies]
+soupsieve = ">1.2"
+
+[package.extras]
+cchardet = ["cchardet"]
+chardet = ["chardet"]
+charset-normalizer = ["charset-normalizer"]
+html5lib = ["html5lib"]
+lxml = ["lxml"]
+
+[[package]]
 name = "certifi"
 version = "2023.11.17"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -664,6 +685,20 @@ files = [
     {file = "mkdocs_material_extensions-1.3.1-py3-none-any.whl", hash = "sha256:adff8b62700b25cb77b53358dad940f3ef973dd6db797907c49e3c2ef3ab4e31"},
     {file = "mkdocs_material_extensions-1.3.1.tar.gz", hash = "sha256:10c9511cea88f568257f960358a467d12b970e1f7b2c0e5fb2bb48cab1928443"},
 ]
+
+[[package]]
+name = "mkdocs-swagger-ui-tag"
+version = "0.6.8"
+description = "A MkDocs plugin supports for add Swagger UI in page."
+optional = false
+python-versions = "*"
+files = [
+    {file = "mkdocs-swagger-ui-tag-0.6.8.tar.gz", hash = "sha256:85bee30ee3d1ded3f5a6901ee9f4d5ed96de4b44bb292d763705aacbaaf4ec02"},
+    {file = "mkdocs_swagger_ui_tag-0.6.8-py3-none-any.whl", hash = "sha256:22836eee1ba865189d32faf3f8e7e97701ac1883e1c08d759be0ff4ec23da758"},
+]
+
+[package.dependencies]
+beautifulsoup4 = ">=4.11.1"
 
 [[package]]
 name = "mkdocstrings"
@@ -1360,6 +1395,17 @@ files = [
 ]
 
 [[package]]
+name = "soupsieve"
+version = "2.5"
+description = "A modern CSS selector implementation for Beautiful Soup."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "soupsieve-2.5-py3-none-any.whl", hash = "sha256:eaa337ff55a1579b6549dc679565eac1e3d000563bcb1c8ab0d0fefbc0c2cdc7"},
+    {file = "soupsieve-2.5.tar.gz", hash = "sha256:5663d5a7b3bfaeee0bc4372e7fc48f9cff4940b3eec54a6451cc5299f1097690"},
+]
+
+[[package]]
 name = "starlette"
 version = "0.36.3"
 description = "The little ASGI library that shines."
@@ -1697,4 +1743,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "b808a82270adccd0d09909c5f2d11dd325f0265fa4cd71b251b1851bea205418"
+content-hash = "444504b705d0a4b263377bc739dad0bb7ffdcbb81bfdc647d2df88045d9d293a"
