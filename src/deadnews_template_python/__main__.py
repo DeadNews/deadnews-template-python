@@ -9,7 +9,7 @@ def main() -> None:
     Note that the application instance itself can be passed instead of the app import string.
     However, this style only works if you are not using multiprocessing (workers=NUM) or reloading (reload=True).
     """
-    uvicorn.run("deadnews_template_python.app:app")
+    uvicorn.run("deadnews_template_python:app")  # pragma: no cover
 
 
 if __name__ == "__main__":
