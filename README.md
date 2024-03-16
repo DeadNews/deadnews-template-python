@@ -12,8 +12,16 @@
 
 ## Installation
 
+PyPI
+
 ```sh
 pip install deadnews-template-python
 # or
 pipx install deadnews-template-python
+```
+
+Docker
+
+```sh
+docker pull ghcr.io/deadnews/deadnews-template-python:latest
 ```
