@@ -11,8 +11,6 @@
 [![Docker](https://github.com/DeadNews/deadnews-template-python/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/DeadNews/deadnews-template-python/actions/workflows/docker-publish.yml)
 [![image-size](https://ghcr-badge.egpl.dev/DeadNews/deadnews-template-python/size)](https://github.com/DeadNews/deadnews-template-python/pkgs/container/deadnews-template-python)
 
-**[Installation](#installation)** • **[Documentation](https://deadnews.github.io/deadnews-template-python)** • **[Docker images](https://github.com/DeadNews/deadnews-template-python/pkgs/container/deadnews-template-python)**
-
 ## Installation
 
 PyPI
