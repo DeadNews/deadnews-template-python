@@ -33,6 +33,10 @@ jobs:
 
   tests:
     name: Tests
+    permissions:
+      contents: read
+      actions: read
+      checks: write
     strategy:
       fail-fast: false
       matrix:
