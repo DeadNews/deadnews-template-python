@@ -57,11 +57,19 @@ jobs:
         run: poetry install
 
       - name: Run tests
-        run: poetry run poe test
+        run: poetry run poe test --junit-xml junit.xml
 
       - name: Upload coverage to Codecov
         if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.12'
         uses: codecov/codecov-action@4fe8c5f003fae66aa5ebb77cfd3e7bfbbda0b6b0 # v3.1.5
+
+      - name: Test Report
+        uses: dorny/test-reporter@eaa763f6ffc21c7a37837f56cd5f9737f27fc6c8 # v1.8.0
+        if: success() || failure()
+        with:
+          name: Pytest Tests
+          path: junit.xml
+          reporter: java-junit
 
   publish-pypi:
     name: Release to PyPI
