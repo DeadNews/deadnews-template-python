@@ -6,31 +6,43 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
 ### Details
+
 #### Changed
+
 - Update by @DeadNews
 - Update by @DeadNews
 - Update by @DeadNews
 
 #### Fixed
+
 - Update dependency uvicorn to ^0.29.0 by @renovate[bot] in [#192](https://github.com/DeadNews/deadnews-template-python/pull/192)
 
 ## [2.0.5] - 2024-03-16
+
 ### Details
+
 #### Added
+
 - Add by @DeadNews in [#187](https://github.com/DeadNews/deadnews-template-python/pull/187)
 
 #### Changed
+
 - Update pre-commit hook astral-sh/ruff-pre-commit to v0.3.3 by @renovate[bot] in [#191](https://github.com/DeadNews/deadnews-template-python/pull/191)
 - Update docker tags by @renovate[bot] in [#189](https://github.com/DeadNews/deadnews-template-python/pull/189)
 - Update dev-dependencies by @renovate[bot] in [#190](https://github.com/DeadNews/deadnews-template-python/pull/190)
 
 #### Fixed
+
 - Update dependency pydantic to v2.6.4 by @renovate[bot] in [#188](https://github.com/DeadNews/deadnews-template-python/pull/188)
 
 ## [2.0.4] - 2024-03-09
+
 ### Details
+
 #### Changed
+
 - Refactor linting tasks in `Makefile` and `pyproject.toml` by @DeadNews
 - Update pypa/gh-action-pypi-publish action to v1.8.12 by @renovate[bot] in [#172](https://github.com/DeadNews/deadnews-template-python/pull/172)
 - Update dependency poetry to v1.8.1 by @renovate[bot] in [#173](https://github.com/DeadNews/deadnews-template-python/pull/173)
@@ -46,6 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update dev-dependencies by @renovate[bot] in [#184](https://github.com/DeadNews/deadnews-template-python/pull/184)
 
 #### Fixed
+
 - Fix `latest tag` behavior in `docker-publish` by @DeadNews
 - Update dependency pydantic to v2.6.2 by @renovate[bot] in [#171](https://github.com/DeadNews/deadnews-template-python/pull/171)
 - Update dependency pydantic to v2.6.3 by @renovate[bot] in [#178](https://github.com/DeadNews/deadnews-template-python/pull/178)
@@ -53,8 +66,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update dependency uvicorn to ^0.28.0 by @renovate[bot] in [#186](https://github.com/DeadNews/deadnews-template-python/pull/186)
 
 ## [2.0.3] - 2024-02-22
+
 ### Details
+
 #### Added
+
 - Add `docker-compose` by @DeadNews
 - Add `checkmake` hook by @DeadNews
 - Add `python 3.12` to tests matrix by @DeadNews in [#159](https://github.com/DeadNews/deadnews-template-python/pull/159)
@@ -62,6 +78,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `docker-pypy` build configuration by @DeadNews in [#167](https://github.com/DeadNews/deadnews-template-python/pull/167)
 
 #### Changed
+
 - Update dev-dependencies by @renovate[bot] in [#143](https://github.com/DeadNews/deadnews-template-python/pull/143)
 - Update pre-commit hooks by @renovate[bot] in [#144](https://github.com/DeadNews/deadnews-template-python/pull/144)
 - Update `Dockerfile` by @DeadNews in [#146](https://github.com/DeadNews/deadnews-template-python/pull/146)
@@ -85,6 +102,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update pre-commit hook astral-sh/ruff-pre-commit to v0.2.2 by @renovate[bot] in [#169](https://github.com/DeadNews/deadnews-template-python/pull/169)
 
 #### Fixed
+
 - Update dependency fastapi to ^0.109.0 by @renovate[bot] in [#145](https://github.com/DeadNews/deadnews-template-python/pull/145)
 - Update dependency uvicorn to ^0.26.0 by @renovate[bot] in [#147](https://github.com/DeadNews/deadnews-template-python/pull/147)
 - Update dependency uvicorn to ^0.27.0 by @renovate[bot] in [#148](https://github.com/DeadNews/deadnews-template-python/pull/148)
@@ -95,8 +113,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update dependency uvicorn to v0.27.1 by @renovate[bot] in [#166](https://github.com/DeadNews/deadnews-template-python/pull/166)
 
 ## [2.0.2] - 2024-01-07
+
 ### Details
+
 #### Changed
+
 - Update dev-dependencies by @renovate[bot] in [#116](https://github.com/DeadNews/deadnews-template-python/pull/116)
 - Update python:3.12.0-alpine docker digest to a5d1738 by @renovate[bot] in [#117](https://github.com/DeadNews/deadnews-template-python/pull/117)
 - Update dev-dependencies by @renovate[bot] in [#118](https://github.com/DeadNews/deadnews-template-python/pull/118)
@@ -121,6 +142,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update by @DeadNews
 
 #### Fixed
+
 - Update dependency fastapi to ^0.104.0 by @renovate[bot] in [#120](https://github.com/DeadNews/deadnews-template-python/pull/120)
 - Update dependency fastapi to v0.104.1 by @renovate[bot] in [#121](https://github.com/DeadNews/deadnews-template-python/pull/121)
 - Update dependency uvicorn to ^0.24.0 by @renovate[bot] in [#122](https://github.com/DeadNews/deadnews-template-python/pull/122)
@@ -132,23 +154,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update dependency fastapi to ^0.108.0 by @renovate[bot] in [#139](https://github.com/DeadNews/deadnews-template-python/pull/139)
 
 ## [2.0.1] - 2023-10-16
+
 ### Details
+
 #### Changed
+
 - Update python docker tag to v3.12 by @renovate[bot] in [#115](https://github.com/DeadNews/deadnews-template-python/pull/115)
 - Update python docker tag to v3.12.0 by @renovate[bot] in [#114](https://github.com/DeadNews/deadnews-template-python/pull/114)
 
 #### Fixed
+
 - Update dependencies by @DeadNews
 - Update dependency `httptools` to `0.6.1` by @DeadNews
 
 ## [2.0.0] - 2023-10-03
+
 ### Details
+
 #### Changed
+
 - Update `Dockerfile` by @DeadNews
 
 ## [1.0.4-alpha.1] - 2023-10-03
+
 ### Details
+
 #### Changed
+
 - Update pre-commit hooks by @renovate[bot] in [#105](https://github.com/DeadNews/deadnews-template-python/pull/105)
 - Update dev-dependencies by @renovate[bot] in [#106](https://github.com/DeadNews/deadnews-template-python/pull/106)
 - Update dependency poethepoet to ^0.23.0 by @renovate[bot] in [#107](https://github.com/DeadNews/deadnews-template-python/pull/107)
@@ -156,13 +188,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change the sample application by @DeadNews in [#108](https://github.com/DeadNews/deadnews-template-python/pull/108)
 
 ## [1.0.3-alpha.3] - 2023-09-21
+
 ### Details
+
 #### Added
+
 - Add `typos` hook by @DeadNews
 - Add `Dockerfile` by @DeadNews in [#102](https://github.com/DeadNews/deadnews-template-python/pull/102)
 - Add `hadolint` hook by @DeadNews
 
 #### Changed
+
 - Update dependency ruff to ^0.0.267 by @renovate[bot] in [#77](https://github.com/DeadNews/deadnews-template-python/pull/77)
 - Update pre-commit hook charliermarsh/ruff-pre-commit to v0.0.267 by @renovate[bot] in [#76](https://github.com/DeadNews/deadnews-template-python/pull/76)
 - Update dependency mypy to v1.3.0 by @renovate[bot] in [#74](https://github.com/DeadNews/deadnews-template-python/pull/74)
@@ -219,15 +255,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use more explicit tag by @DeadNews
 
 #### Fixed
+
 - Fix `workflow` name by @DeadNews
 - Fix `workflow` name by @DeadNews
 
 #### Removed
+
 - Remove one `codecov` condition by @DeadNews
 
 ## [1.0.2] - 2023-05-06
+
 ### Details
+
 #### Changed
+
 - Update pre-commit hook python-jsonschema/check-jsonschema to v0.23.0 by @renovate[bot] in [#71](https://github.com/DeadNews/deadnews-template-python/pull/71)
 - Unpinn poetry runtime versions by @DeadNews
 - Update `poetry` hooks by @DeadNews
@@ -235,13 +276,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update pre-commit hook charliermarsh/ruff-pre-commit to v0.0.265 by @renovate[bot] in [#73](https://github.com/DeadNews/deadnews-template-python/pull/73)
 
 ## [1.0.2-alpha.6] - 2023-05-04
+
 ### Details
+
 #### Changed
+
 - Use version specifiers for poetry runtime by @DeadNews
 
 ## [1.0.2-alpha.5] - 2023-05-04
+
 ### Details
+
 #### Changed
+
 - Try `snok/install-poetry` by @DeadNews
 - Try to install poetry with `pip` by @DeadNews
 - Dev pr by @DeadNews in [#69](https://github.com/DeadNews/deadnews-template-python/pull/69)
@@ -253,40 +300,57 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use version specifiers for poetry runtime by @DeadNews
 
 ## [1.0.2-alpha.4] - 2023-05-03
+
 ### Details
+
 #### Changed
+
 - Replace `isort` and `absolufy-imports` with `ruff` by @DeadNews
 - Adjust `.gitignore` by @DeadNews
 - Use all `ruff` rules by @DeadNews
 - Try `trusted publishing` by @DeadNews
 
 ## [1.0.2-alpha.3] - 2023-05-02
+
 ### Details
+
 #### Changed
+
 - Sort `pyproject.toml` by @DeadNews
 - Rename project to `deadnews-template-python` by @DeadNews
 - Disable `ko-poetry-audit-plugin` by @DeadNews
 
 #### Removed
+
 - Remove `safety` by @DeadNews
 
 ## [1.0.2-alpha.2] - 2023-05-02
+
 ### Details
+
 #### Changed
+
 - Test `poetry-dynamic-versioning` by @DeadNews
 
 ## [1.0.2-alpha.1] - 2023-05-02
+
 ### Details
+
 #### Changed
+
 - Test `poetry-dynamic-versioning` by @DeadNews
 
 ## [1.0.2-alpha.0] - 2023-05-02
+
 ### Details
+
 #### Added
+
 - Add `ruff` linter by @DeadNews
 - Add `poetry-dynamic-versioning` by @DeadNews
 
 #### Changed
+
 - Reorder hooks by @DeadNews
 - Dev pr by @DeadNews in [#66](https://github.com/DeadNews/deadnews-template-python/pull/66)
 - Update pre-commit hook pre-commit/mirrors-prettier to v3.0.0-alpha.9-for-vscode by @renovate[bot] in [#67](https://github.com/DeadNews/deadnews-template-python/pull/67)

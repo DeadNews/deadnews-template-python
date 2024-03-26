@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 ---
+
 ## [unreleased]
 
 ### Bug Fixes
@@ -16,6 +17,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(readme)** update - ([fb38af2](https://github.com/cocogitto/cocogitto/commit/fb38af2414a591f06b7aff4a846f5c2b6973e0f3)) - DeadNews
 
 ---
+
 ## [2.0.5](https://github.com/cocogitto/cocogitto/compare/v2.0.4..v2.0.5) - 2024-03-16
 
 ### Bug Fixes
@@ -39,6 +41,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(deps)** update pre-commit hook astral-sh/ruff-pre-commit to v0.3.3 (#191) - ([9592c9d](https://github.com/cocogitto/cocogitto/commit/9592c9d810141d0962b0ef6f029cc18b762373a2)) - renovate[bot]
 
 ---
+
 ## [2.0.4](https://github.com/cocogitto/cocogitto/compare/v2.0.3..v2.0.4) - 2024-03-09
 
 ### Bug Fixes
@@ -69,6 +72,7 @@ All notable changes to this project will be documented in this file. See [conven
 - refactor linting tasks in `Makefile` and `pyproject.toml` - ([c1896ec](https://github.com/cocogitto/cocogitto/commit/c1896ec6a3419d661f211d1324dc8460f6202a87)) - DeadNews
 
 ---
+
 ## [2.0.3](https://github.com/cocogitto/cocogitto/compare/v2.0.2..v2.0.3) - 2024-02-22
 
 ### Bug Fixes
@@ -121,6 +125,7 @@ All notable changes to this project will be documented in this file. See [conven
 - add `docker-pypy` build configuration (#167) - ([1bfac68](https://github.com/cocogitto/cocogitto/commit/1bfac68e643eb4da03c4d778842b20f280a1dfd7)) - DeadNews
 
 ---
+
 ## [2.0.2](https://github.com/cocogitto/cocogitto/compare/v2.0.1..v2.0.2) - 2024-01-07
 
 ### Bug Fixes
@@ -167,6 +172,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(deps)** update pre-commit hooks (#137) - ([9c81d27](https://github.com/cocogitto/cocogitto/commit/9c81d2793ed8dc923cba8bbbd983a0fa171b1f53)) - renovate[bot]
 
 ---
+
 ## [2.0.1](https://github.com/cocogitto/cocogitto/compare/v2.0.0..v2.0.1) - 2023-10-16
 
 ### Bug Fixes
@@ -183,6 +189,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(deps)** update python docker tag to v3.12.0 (#114) - ([9f7f3a6](https://github.com/cocogitto/cocogitto/commit/9f7f3a608cc7a7f5cde921d82107e72495915ab1)) - renovate[bot]
 
 ---
+
 ## [2.0.0](https://github.com/cocogitto/cocogitto/compare/v1.0.4-alpha.1..v2.0.0) - 2023-10-03
 
 ### Build
@@ -190,6 +197,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(docker)** update `Dockerfile` - ([c1b656c](https://github.com/cocogitto/cocogitto/commit/c1b656c1ae207de3a4c019a00d6c2350e2fdd959)) - DeadNews
 
 ---
+
 ## [1.0.4-alpha.1](https://github.com/cocogitto/cocogitto/compare/v1.0.3-alpha.3..v1.0.4-alpha.1) - 2023-10-03
 
 ### Features
@@ -207,6 +215,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(deps)** update pre-commit hooks (#105) - ([915eec3](https://github.com/cocogitto/cocogitto/commit/915eec373b3683445907a1af53522b3052da1eff)) - renovate[bot]
 
 ---
+
 ## [1.0.3-alpha.3](https://github.com/cocogitto/cocogitto/compare/v1.0.2..v1.0.3-alpha.3) - 2023-09-21
 
 ### Documentation
@@ -285,6 +294,7 @@ All notable changes to this project will be documented in this file. See [conven
 - disable `codeql` on `schedule` - ([19fc537](https://github.com/cocogitto/cocogitto/commit/19fc537d21658cfd8a0c7da24e9b927c0abccb71)) - DeadNews
 
 ---
+
 ## [1.0.2](https://github.com/cocogitto/cocogitto/compare/v1.0.2-alpha.6..v1.0.2) - 2023-05-06
 
 ### Miscellaneous Chores
@@ -299,6 +309,7 @@ All notable changes to this project will be documented in this file. See [conven
 - unpinn poetry runtime versions - ([70051e1](https://github.com/cocogitto/cocogitto/commit/70051e1332999bb6b9b68f6c24b8492290a8bd5a)) - DeadNews
 
 ---
+
 ## [1.0.2-alpha.6](https://github.com/cocogitto/cocogitto/compare/v1.0.2-alpha.5..v1.0.2-alpha.6) - 2023-05-04
 
 ### Ci
@@ -306,6 +317,7 @@ All notable changes to this project will be documented in this file. See [conven
 - use version specifiers for poetry runtime - ([96b717a](https://github.com/cocogitto/cocogitto/commit/96b717a1ab06167b07175ccbac4d37a6855d7a57)) - DeadNews
 
 ---
+
 ## [1.0.2-alpha.5](https://github.com/cocogitto/cocogitto/compare/v1.0.2-alpha.4..v1.0.2-alpha.5) - 2023-05-04
 
 ### Features
@@ -327,6 +339,7 @@ All notable changes to this project will be documented in this file. See [conven
 - use version specifiers for poetry runtime - ([2b03d36](https://github.com/cocogitto/cocogitto/commit/2b03d364c4f181a6536a1984c22541fe2071f9f5)) - DeadNews
 
 ---
+
 ## [1.0.2-alpha.4](https://github.com/cocogitto/cocogitto/compare/v1.0.2-alpha.3..v1.0.2-alpha.4) - 2023-05-03
 
 ### Features
@@ -343,6 +356,7 @@ All notable changes to this project will be documented in this file. See [conven
 - try `trusted publishing` - ([c31a811](https://github.com/cocogitto/cocogitto/commit/c31a8113913cc19099c9463c3c161b4080216d1c)) - DeadNews
 
 ---
+
 ## [1.0.2-alpha.3](https://github.com/cocogitto/cocogitto/compare/v1.0.2-alpha.2..v1.0.2-alpha.3) - 2023-05-02
 
 ### Miscellaneous Chores
@@ -353,6 +367,7 @@ All notable changes to this project will be documented in this file. See [conven
 - rename project to `deadnews-template-python` - ([837c0c0](https://github.com/cocogitto/cocogitto/commit/837c0c0aaa907cb5468ac9b9ae0477d1bd397bd0)) - DeadNews
 
 ---
+
 ## [1.0.2-alpha.2](https://github.com/cocogitto/cocogitto/compare/v1.0.2-alpha.1..v1.0.2-alpha.2) - 2023-05-02
 
 ### Build
@@ -360,6 +375,7 @@ All notable changes to this project will be documented in this file. See [conven
 - test `poetry-dynamic-versioning` - ([6973cc1](https://github.com/cocogitto/cocogitto/commit/6973cc1fc89ae7edc4b44b97ecb4fd3683e15d32)) - DeadNews
 
 ---
+
 ## [1.0.2-alpha.1](https://github.com/cocogitto/cocogitto/compare/v1.0.2-alpha.0..v1.0.2-alpha.1) - 2023-05-02
 
 ### Build
@@ -367,6 +383,7 @@ All notable changes to this project will be documented in this file. See [conven
 - test `poetry-dynamic-versioning` - ([9af0b16](https://github.com/cocogitto/cocogitto/commit/9af0b16e82a60d32699083a4eccb33891398ce80)) - DeadNews
 
 ---
+
 ## [1.0.2-alpha.0] - 2023-05-02
 
 ### Features
