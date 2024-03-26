@@ -100,10 +100,10 @@ protect_breaking_commits = false
 filter_commits = false
 # regex for matching git tags
 tag_pattern = "v[0-9].*"
-# regex for skipping tags
-skip_tags = "beta|alpha"
-# regex for ignoring tags
-# ignore_tags = ""
+# regex for skipping tags, drop commits from the changelog
+# skip_tags = "beta|alpha"
+# regex for ignoring tags, include ignored commits into the next tag
+ignore_tags = "rc|beta|alpha"
 # sort the tags topologically
 topo_order = false
 # sort the commits inside sections by oldest/newest order

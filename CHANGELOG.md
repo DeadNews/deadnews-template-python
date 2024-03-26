@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 
 ### 📚 Documentation
 
+- _(changelog)_ Add `git-cliff` - ([686106c](https://github.com/DeadNews/deadnews-template-python/commit/686106c65fdf8cbb40a78c8289ac72eeb643f35f))
 - _(changelog)_ Add - ([bcddba0](https://github.com/DeadNews/deadnews-template-python/commit/bcddba0e8ad2b92b2b133750da77ccb1cbacae34))
 - _(changelog)_ Add - ([308cafc](https://github.com/DeadNews/deadnews-template-python/commit/308cafc7fd8ab4b4406b137f3e2628da175083d3))
 - _(changelog)_ Add - ([772fde0](https://github.com/DeadNews/deadnews-template-python/commit/772fde08332eb4f626179647d42e1a4632b1e6db))
@@ -151,15 +152,104 @@ All notable changes to this project will be documented in this file.
 
 ## [2.0.0](https://github.com/DeadNews/deadnews-template-python/compare/v1.0.2...v2.0.0) - 2023-10-03
 
+### 🚀 Features
+
+- Change the sample application ([#108](https://github.com/DeadNews/deadnews-template-python/issues/108)) - ([1291cdb](https://github.com/DeadNews/deadnews-template-python/commit/1291cdbd33b5dc3c284fc411fb13b156c1847c88))
+
+### 📚 Documentation
+
+- _(readme)_ Update badge - ([b26c3a4](https://github.com/DeadNews/deadnews-template-python/commit/b26c3a40a560bff0106ee1f35220082e704778fa))
+- Fix `workflow` name - ([35d8462](https://github.com/DeadNews/deadnews-template-python/commit/35d8462dcb541d11155347b3f77c95805a648753))
+- Fix `workflow` name - ([eaf097c](https://github.com/DeadNews/deadnews-template-python/commit/eaf097c2de4963b0a1a37890419cd8c2d2677343))
+
+### ⚙️ Miscellaneous Tasks
+
+- _(deps)_ Update pre-commit hooks ([#105](https://github.com/DeadNews/deadnews-template-python/issues/105)) - ([915eec3](https://github.com/DeadNews/deadnews-template-python/commit/915eec373b3683445907a1af53522b3052da1eff))
+- _(deps)_ Update actions/checkout action to v4 ([#104](https://github.com/DeadNews/deadnews-template-python/issues/104)) - ([13a3eb1](https://github.com/DeadNews/deadnews-template-python/commit/13a3eb14e8766ffdb63e26d55e52ab24249c8b82))
+- _(deps)_ Update pre-commit hooks ([#103](https://github.com/DeadNews/deadnews-template-python/issues/103)) - ([528a868](https://github.com/DeadNews/deadnews-template-python/commit/528a868ab0d967b9bf69388ed7b17d0dc7609799))
+- _(deps)_ Update pre-commit hook python-jsonschema/check-jsonschema to v0.26.1 ([#101](https://github.com/DeadNews/deadnews-template-python/issues/101)) - ([7bcbdef](https://github.com/DeadNews/deadnews-template-python/commit/7bcbdef85e19077b64d4c4f349f374d56536eba6))
+- _(deps)_ Update pypa/gh-action-pypi-publish action to v1.8.10 ([#99](https://github.com/DeadNews/deadnews-template-python/issues/99)) - ([3a1b4ea](https://github.com/DeadNews/deadnews-template-python/commit/3a1b4ea8c66016f3c39957e4a617a8a6a5769dce))
+- _(deps)_ Update pre-commit hooks ([#98](https://github.com/DeadNews/deadnews-template-python/issues/98)) - ([439caa5](https://github.com/DeadNews/deadnews-template-python/commit/439caa51ec9f7f4408d779347115ccdae1322b53))
+- _(deps)_ Update pypa/gh-action-pypi-publish action to v1.8.8 ([#96](https://github.com/DeadNews/deadnews-template-python/issues/96)) - ([6d0b8ff](https://github.com/DeadNews/deadnews-template-python/commit/6d0b8ff33994f40af8f7d1f895c3664484d5bd73))
+- _(deps)_ Update pre-commit hooks ([#95](https://github.com/DeadNews/deadnews-template-python/issues/95)) - ([f80e638](https://github.com/DeadNews/deadnews-template-python/commit/f80e638205768619ce55759ee04ff3b8da140ba7))
+- _(deps)_ Update pypa/gh-action-pypi-publish action to v1.8.7 ([#92](https://github.com/DeadNews/deadnews-template-python/issues/92)) - ([2e74022](https://github.com/DeadNews/deadnews-template-python/commit/2e740224ab082f7e7374e8688f3d533469c3464d))
+- _(deps)_ Update pre-commit hooks ([#91](https://github.com/DeadNews/deadnews-template-python/issues/91)) - ([0327dc1](https://github.com/DeadNews/deadnews-template-python/commit/0327dc139fe0d37aafa784f25677ae8a307c6c47))
+- _(deps)_ Update pre-commit hooks ([#90](https://github.com/DeadNews/deadnews-template-python/issues/90)) - ([0f81f6e](https://github.com/DeadNews/deadnews-template-python/commit/0f81f6eb7ca9c93b2ab52d99400d2c3ecdf46d55))
+- _(deps)_ Update codecov/codecov-action action to v3.1.4 ([#79](https://github.com/DeadNews/deadnews-template-python/issues/79)) - ([03b6308](https://github.com/DeadNews/deadnews-template-python/commit/03b630895ea88968443f318ea87820cb8406db3c))
+- _(pre-commit)_ Add `hadolint` hook - ([82ef6d3](https://github.com/DeadNews/deadnews-template-python/commit/82ef6d3e28c0fcca77642877e4b36640aa39e7f3))
+- _(pre-commit)_ Use `black` mirror - ([933f093](https://github.com/DeadNews/deadnews-template-python/commit/933f093e6289dabef80424fd81a6047613922a9b))
+- _(pre-commit)_ Add `typos` hook - ([3d27c7a](https://github.com/DeadNews/deadnews-template-python/commit/3d27c7a3559c3c59942096aa9a958f7a7e2001e3))
+- _(pre-commit)_ Adjust schedule - ([67885b8](https://github.com/DeadNews/deadnews-template-python/commit/67885b827357f410d9e399fe5e8254f1f914665e))
+- _(renovate)_ Update schedule - ([c50878e](https://github.com/DeadNews/deadnews-template-python/commit/c50878e58470b235bf037fd72b077b34abbeb5e9))
+- _(renovate)_ Adjust schedule - ([65b880e](https://github.com/DeadNews/deadnews-template-python/commit/65b880e37ee705caede2fdd72871ba91bf7c0812))
+- _(renovate)_ Use shared config - ([c6b7203](https://github.com/DeadNews/deadnews-template-python/commit/c6b72033767fdec373164adaebb9b5d200397269))
+- Specify python `target-version` - ([cecc630](https://github.com/DeadNews/deadnews-template-python/commit/cecc630609866a74a7e5bff061f557b463af7324))
+- Disable `codeql` on `schedule` - ([19fc537](https://github.com/DeadNews/deadnews-template-python/commit/19fc537d21658cfd8a0c7da24e9b927c0abccb71))
+- Disable `codeql` on `pull_request` - ([d010117](https://github.com/DeadNews/deadnews-template-python/commit/d010117d46ae1098d7753625bedd912501745905))
+- Move `pytest` command - ([670acab](https://github.com/DeadNews/deadnews-template-python/commit/670acab1aa430ca903b7d44676257ef093dc6030))
+- Update `coverage` config - ([040341c](https://github.com/DeadNews/deadnews-template-python/commit/040341c54f239ed36d45b8f86d0d5514cee44726))
+- Ignore `PLR0913` ruff rule - ([2aa2f67](https://github.com/DeadNews/deadnews-template-python/commit/2aa2f67d388a03e0995bf41a338c03bf5dcfa5c8))
+- Try `pinDigests` - ([e82dab9](https://github.com/DeadNews/deadnews-template-python/commit/e82dab958f01b85f5911b2f7cc60f2ef1a89debd))
+- Try `pinDigests` - ([0763b26](https://github.com/DeadNews/deadnews-template-python/commit/0763b260c7604c02298ea4a30276f7cb7e6cd371))
+- Use digest pinning - ([c7e78f2](https://github.com/DeadNews/deadnews-template-python/commit/c7e78f2deddc9702c7695fa40e14727bd6838f65))
+- Use digest pinning - ([24d8678](https://github.com/DeadNews/deadnews-template-python/commit/24d8678a8b756d0dec29908455f507a1a48a0435))
+- Use digest pinning - ([b2a9fc2](https://github.com/DeadNews/deadnews-template-python/commit/b2a9fc2ef93c24baae5f7f0c85d15bbf359b39ec))
+- Use digest pinning - ([01271c6](https://github.com/DeadNews/deadnews-template-python/commit/01271c6f4a144f14045b4f55795217132a5951c6))
+- Rename poetry `group` - ([2ca9a07](https://github.com/DeadNews/deadnews-template-python/commit/2ca9a075f0eb50b537ac542b53dab2cab35e62d0))
+- Update `workflows` ([#78](https://github.com/DeadNews/deadnews-template-python/issues/78)) - ([d8cfce8](https://github.com/DeadNews/deadnews-template-python/commit/d8cfce881cc341984157ef3ea3d6fcf844fcb098))
+- Cache all dependency groups - ([91e4b4c](https://github.com/DeadNews/deadnews-template-python/commit/91e4b4c0a8673f4258f89982f146d7c1c637c831))
+- Remove one `codecov` condition - ([3bee9d2](https://github.com/DeadNews/deadnews-template-python/commit/3bee9d2e21f8aef3016f442bde5c4b9322528285))
+- Try `.python-version` - ([d0b8832](https://github.com/DeadNews/deadnews-template-python/commit/d0b883266a824fa47cfe616565801ebd86082370))
+- Create `settings.yml ` - ([938899c](https://github.com/DeadNews/deadnews-template-python/commit/938899cbbc742b044c07184a229908b30dee8cb1))
+
+### ◀️ Revert
+
+- _(pre-commit)_ Use `digest pinning` - ([7b8e4b7](https://github.com/DeadNews/deadnews-template-python/commit/7b8e4b7577c38008fd4dafa9911d1f645c03393f))
+- _(pre-commit)_ Use `digest pinning` - ([fbca217](https://github.com/DeadNews/deadnews-template-python/commit/fbca217fbdde7e7d6cf2b55f7d664d4ec280ea1f))
+- Try `pinDigests` - ([ff97b73](https://github.com/DeadNews/deadnews-template-python/commit/ff97b731ac054580206906c450ad9f05868ea250))
+
 ### Build
 
 - _(docker)_ Update `Dockerfile` - ([c1b656c](https://github.com/DeadNews/deadnews-template-python/commit/c1b656c1ae207de3a4c019a00d6c2350e2fdd959))
+- _(docker)_ Use more explicit tag - ([35c2993](https://github.com/DeadNews/deadnews-template-python/commit/35c29931088fd965a5595a9f084b073846e10d4c))
+- _(docker)_ Add `Dockerfile` ([#102](https://github.com/DeadNews/deadnews-template-python/issues/102)) - ([6b907fb](https://github.com/DeadNews/deadnews-template-python/commit/6b907fbbf50cb138dd09ac4b427b4aef8d8e61d9))
 
 ## [1.0.2] - 2023-05-06
+
+### 🚀 Features
+
+- _(ruff)_ Add `ruff` linter - ([4f09a8f](https://github.com/DeadNews/deadnews-template-python/commit/4f09a8fc6d2b1cca63c287612bbeaf690f8f2973))
+- Dev pr ([#69](https://github.com/DeadNews/deadnews-template-python/issues/69)) - ([785fa24](https://github.com/DeadNews/deadnews-template-python/commit/785fa246cabf4940567e8485661f7a4884d245b4))
+- Replace `isort` and `absolufy-imports` with `ruff` - ([4f63177](https://github.com/DeadNews/deadnews-template-python/commit/4f63177a9bc885548cadb77666273eb74b190cdf))
+- Replace `flake8` and `bandit` with `ruff` - ([c43fe8e](https://github.com/DeadNews/deadnews-template-python/commit/c43fe8e2a76dcefed2b2bff0d99ec54592286a1d))
+- Dev pr ([#66](https://github.com/DeadNews/deadnews-template-python/issues/66)) - ([f1966da](https://github.com/DeadNews/deadnews-template-python/commit/f1966da92e78c5ecddb65a5bac7f19e43093678b))
 
 ### ⚙️ Miscellaneous Tasks
 
 - _(pre-commit)_ Update `poetry` hooks - ([65726a8](https://github.com/DeadNews/deadnews-template-python/commit/65726a874b4a352ed46feb85fdf1629575b80d3f))
+- _(pre-commit)_ Disable `ko-poetry-audit-plugin` - ([d5d2a9f](https://github.com/DeadNews/deadnews-template-python/commit/d5d2a9f46cb3b8a264f40c474b0b2025e8ec0f40))
+- _(renovate)_ Try `regexManagers` - ([52f9cfd](https://github.com/DeadNews/deadnews-template-python/commit/52f9cfd58a5d3771476bcca8ed77825126e179e4))
 - Unpinn poetry runtime versions - ([70051e1](https://github.com/DeadNews/deadnews-template-python/commit/70051e1332999bb6b9b68f6c24b8492290a8bd5a))
+- Use version specifiers for poetry runtime - ([96b717a](https://github.com/DeadNews/deadnews-template-python/commit/96b717a1ab06167b07175ccbac4d37a6855d7a57))
+- Use version specifiers for poetry runtime - ([2b03d36](https://github.com/DeadNews/deadnews-template-python/commit/2b03d364c4f181a6536a1984c22541fe2071f9f5))
+- Use version specifiers for poetry runtime - ([c5fbfd6](https://github.com/DeadNews/deadnews-template-python/commit/c5fbfd6097af050009d8549c64cd1aabf4a6379f))
+- Use version specifiers for poetry runtime - ([ab8cd83](https://github.com/DeadNews/deadnews-template-python/commit/ab8cd83fe24c7b37484cdd6351178032e2285228))
+- Try to install poetry with `pip` - ([2c1d1f5](https://github.com/DeadNews/deadnews-template-python/commit/2c1d1f53e74cfff53d22685c8974c6af4b97695a))
+- Try `snok/install-poetry` - ([0eaf70d](https://github.com/DeadNews/deadnews-template-python/commit/0eaf70dd0522d623ed7513f7e3e7ae042aefa17c))
+- Try `trusted publishing` - ([c31a811](https://github.com/DeadNews/deadnews-template-python/commit/c31a8113913cc19099c9463c3c161b4080216d1c))
+- Use all `ruff` rules - ([b8f54d6](https://github.com/DeadNews/deadnews-template-python/commit/b8f54d6c4aeab6cebffd64869676304fdb46db7e))
+- Adjust `.gitignore` - ([565325f](https://github.com/DeadNews/deadnews-template-python/commit/565325fa9ce5c69b7005738a97bf0b999f1cdc9b))
+- Rename project to `deadnews-template-python` - ([837c0c0](https://github.com/DeadNews/deadnews-template-python/commit/837c0c0aaa907cb5468ac9b9ae0477d1bd397bd0))
+- Sort `pyproject.toml` - ([d1ddc49](https://github.com/DeadNews/deadnews-template-python/commit/d1ddc49610b6aba75ca18813dd083626579429ec))
+
+### Build
+
+- Test `poetry-dynamic-versioning` - ([6973cc1](https://github.com/DeadNews/deadnews-template-python/commit/6973cc1fc89ae7edc4b44b97ecb4fd3683e15d32))
+- Test `poetry-dynamic-versioning` - ([9af0b16](https://github.com/DeadNews/deadnews-template-python/commit/9af0b16e82a60d32699083a4eccb33891398ce80))
+- Add `poetry-dynamic-versioning` - ([502d319](https://github.com/DeadNews/deadnews-template-python/commit/502d319d0cfda7b4cdc91c4d662de5bc814d6c0b))
+
+### Pre-commit
+
+- Reorder hooks - ([f45b354](https://github.com/DeadNews/deadnews-template-python/commit/f45b3546f14146d4d75b485fc8726e1217c38d2f))
 
 <!-- generated by git-cliff -->
