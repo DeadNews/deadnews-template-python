@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 
 ### 📚 Documentation
 
+- _(changelog)_ Add `git-cliff` - ([8282f92](https://github.com/DeadNews/deadnews-template-python/commit/8282f92de71a87b9c26799b2ec5a26262e442b34))
 - _(changelog)_ Add `git-cliff` - ([686106c](https://github.com/DeadNews/deadnews-template-python/commit/686106c65fdf8cbb40a78c8289ac72eeb643f35f))
 - _(changelog)_ Add - ([bcddba0](https://github.com/DeadNews/deadnews-template-python/commit/bcddba0e8ad2b92b2b133750da77ccb1cbacae34))
 - _(changelog)_ Add - ([308cafc](https://github.com/DeadNews/deadnews-template-python/commit/308cafc7fd8ab4b4406b137f3e2628da175083d3))
@@ -33,10 +34,6 @@ All notable changes to this project will be documented in this file.
 
 - _(mkdocs)_ Add ([#187](https://github.com/DeadNews/deadnews-template-python/issues/187)) - ([44b5641](https://github.com/DeadNews/deadnews-template-python/commit/44b56417e0fc95a0382178ad3a0dcf22f6506aaf))
 
-### ⚙️ Miscellaneous Tasks
-
-- _(deps)_ Update pre-commit hook astral-sh/ruff-pre-commit to v0.3.3 ([#191](https://github.com/DeadNews/deadnews-template-python/issues/191)) - ([9592c9d](https://github.com/DeadNews/deadnews-template-python/commit/9592c9d810141d0962b0ef6f029cc18b762373a2))
-
 ### Build
 
 - _(deps)_ Update docker tags ([#189](https://github.com/DeadNews/deadnews-template-python/issues/189)) - ([70fd4b1](https://github.com/DeadNews/deadnews-template-python/commit/70fd4b1e92a537dfa9e3a5d09a13269da25836ad))
@@ -52,12 +49,6 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
-- _(deps)_ Update pre-commit hook pre-commit/mirrors-mypy to v1.9.0 ([#185](https://github.com/DeadNews/deadnews-template-python/issues/185)) - ([e56431e](https://github.com/DeadNews/deadnews-template-python/commit/e56431eecf699f596003fd61a4ef79a3f28a03ed))
-- _(deps)_ Update pypa/gh-action-pypi-publish action to v1.8.14 ([#183](https://github.com/DeadNews/deadnews-template-python/issues/183)) - ([1d1a462](https://github.com/DeadNews/deadnews-template-python/commit/1d1a462f534bb18c7ea797260f381d4aa03344d0))
-- _(deps)_ Update pre-commit hooks ([#182](https://github.com/DeadNews/deadnews-template-python/issues/182)) - ([22c60f6](https://github.com/DeadNews/deadnews-template-python/commit/22c60f6563c3454b984ef7c3469516126b7c6f10))
-- _(deps)_ Update pre-commit hooks ([#177](https://github.com/DeadNews/deadnews-template-python/issues/177)) - ([5877f87](https://github.com/DeadNews/deadnews-template-python/commit/5877f8707fdced85f90bfde0f0dc6289ec525f61))
-- _(deps)_ Update pre-commit hooks ([#175](https://github.com/DeadNews/deadnews-template-python/issues/175)) - ([70e0bab](https://github.com/DeadNews/deadnews-template-python/commit/70e0bab0cbbe4b95277c4a483d94d2cec6df5348))
-- _(deps)_ Update pypa/gh-action-pypi-publish action to v1.8.12 ([#172](https://github.com/DeadNews/deadnews-template-python/issues/172)) - ([0f95fc9](https://github.com/DeadNews/deadnews-template-python/commit/0f95fc9cb2f5b7d0faa8871c75b76d7f537888fd))
 - _(pre-commit)_ Replace `hadolint-docker` with `hadolint-py` ([#180](https://github.com/DeadNews/deadnews-template-python/issues/180)) - ([3f527a1](https://github.com/DeadNews/deadnews-template-python/commit/3f527a18305466c593677922661f5f52c41fd3af))
 - Refactor linting tasks in `Makefile` and `pyproject.toml` - ([c1896ec](https://github.com/DeadNews/deadnews-template-python/commit/c1896ec6a3419d661f211d1324dc8460f6202a87))
 - Fix `latest tag` behavior in `docker-publish` - ([20d415e](https://github.com/DeadNews/deadnews-template-python/commit/20d415ed76b335a79a6b4247f0befc37205d721a))
@@ -82,12 +73,6 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
-- _(deps)_ Update pre-commit hook astral-sh/ruff-pre-commit to v0.2.2 ([#169](https://github.com/DeadNews/deadnews-template-python/issues/169)) - ([2e148a7](https://github.com/DeadNews/deadnews-template-python/commit/2e148a7c46497c101d0431febd9c4e42bb4a0cf0))
-- _(deps)_ Update actions/dependency-review-action action to v4 ([#165](https://github.com/DeadNews/deadnews-template-python/issues/165)) - ([3982da1](https://github.com/DeadNews/deadnews-template-python/commit/3982da13c25e23d9fd0d715e1df255a8b6e8a42a))
-- _(deps)_ Update pre-commit hooks ([#164](https://github.com/DeadNews/deadnews-template-python/issues/164)) - ([79b9cfa](https://github.com/DeadNews/deadnews-template-python/commit/79b9cfafd0264ec5ab8388d68862923d515c2e5d))
-- _(deps)_ Update pre-commit hooks ([#154](https://github.com/DeadNews/deadnews-template-python/issues/154)) - ([bb69dbd](https://github.com/DeadNews/deadnews-template-python/commit/bb69dbd1081cd4af907131bb5ed5621153a99caa))
-- _(deps)_ Update codecov/codecov-action action to v3.1.6 ([#150](https://github.com/DeadNews/deadnews-template-python/issues/150)) - ([7953eeb](https://github.com/DeadNews/deadnews-template-python/commit/7953eeb179138f0e4d19aed2d67a32ba3c807f08))
-- _(deps)_ Update pre-commit hooks ([#144](https://github.com/DeadNews/deadnews-template-python/issues/144)) - ([3e089c1](https://github.com/DeadNews/deadnews-template-python/commit/3e089c103f2e4d7c76a9d3e2bb8a79841b3d0e6f))
 - _(github)_ Add `python 3.12` to tests matrix ([#159](https://github.com/DeadNews/deadnews-template-python/issues/159)) - ([2b6d067](https://github.com/DeadNews/deadnews-template-python/commit/2b6d067074a23234f6b072cca10a8d6cc274d4cf))
 - _(pre-commit)_ Add `checkmake` hook - ([17cebe5](https://github.com/DeadNews/deadnews-template-python/commit/17cebe525dd8cf86a278e6550ae61b5e4d35d128))
 - Add `docker-pypy` build configuration ([#167](https://github.com/DeadNews/deadnews-template-python/issues/167)) - ([1bfac68](https://github.com/DeadNews/deadnews-template-python/commit/1bfac68e643eb4da03c4d778842b20f280a1dfd7))
@@ -121,12 +106,6 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
-- _(deps)_ Update pre-commit hooks ([#137](https://github.com/DeadNews/deadnews-template-python/issues/137)) - ([9c81d27](https://github.com/DeadNews/deadnews-template-python/commit/9c81d2793ed8dc923cba8bbbd983a0fa171b1f53))
-- _(deps)_ Update github actions ([#134](https://github.com/DeadNews/deadnews-template-python/issues/134)) - ([addf4c6](https://github.com/DeadNews/deadnews-template-python/commit/addf4c6ceb313b7eabb8eddf16ba7e93da73e322))
-- _(deps)_ Update pypa/gh-action-pypi-publish action to v1.8.11 ([#132](https://github.com/DeadNews/deadnews-template-python/issues/132)) - ([166a392](https://github.com/DeadNews/deadnews-template-python/commit/166a392b4716342301d6bbe2c39badcbcbdeaa55))
-- _(deps)_ Update pre-commit hooks ([#131](https://github.com/DeadNews/deadnews-template-python/issues/131)) - ([b0a5c88](https://github.com/DeadNews/deadnews-template-python/commit/b0a5c886c6111ebe622a0242899f98d22704db50))
-- _(deps)_ Update pre-commit hooks ([#124](https://github.com/DeadNews/deadnews-template-python/issues/124)) - ([187b5e9](https://github.com/DeadNews/deadnews-template-python/commit/187b5e9f31b696cc390d0ef88740c0c11823078d))
-- _(deps)_ Update pre-commit hooks ([#119](https://github.com/DeadNews/deadnews-template-python/issues/119)) - ([ea6f096](https://github.com/DeadNews/deadnews-template-python/commit/ea6f096089f21e4c895fa0677a6c702625489420))
 - _(makefile)_ Update - ([8f45816](https://github.com/DeadNews/deadnews-template-python/commit/8f458162ccd3d3b0de3a5b7b41b5a87f8442046a))
 - _(vscode)_ Update settings ([#140](https://github.com/DeadNews/deadnews-template-python/issues/140)) - ([5875049](https://github.com/DeadNews/deadnews-template-python/commit/587504936db2997c3f8513dadc3a37f1cc6f8f95))
 - Rename `poe` task - ([2c7962e](https://github.com/DeadNews/deadnews-template-python/commit/2c7962e030d13869ed2a975e5371b3e6b9b9a913))
@@ -164,18 +143,6 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
-- _(deps)_ Update pre-commit hooks ([#105](https://github.com/DeadNews/deadnews-template-python/issues/105)) - ([915eec3](https://github.com/DeadNews/deadnews-template-python/commit/915eec373b3683445907a1af53522b3052da1eff))
-- _(deps)_ Update actions/checkout action to v4 ([#104](https://github.com/DeadNews/deadnews-template-python/issues/104)) - ([13a3eb1](https://github.com/DeadNews/deadnews-template-python/commit/13a3eb14e8766ffdb63e26d55e52ab24249c8b82))
-- _(deps)_ Update pre-commit hooks ([#103](https://github.com/DeadNews/deadnews-template-python/issues/103)) - ([528a868](https://github.com/DeadNews/deadnews-template-python/commit/528a868ab0d967b9bf69388ed7b17d0dc7609799))
-- _(deps)_ Update pre-commit hook python-jsonschema/check-jsonschema to v0.26.1 ([#101](https://github.com/DeadNews/deadnews-template-python/issues/101)) - ([7bcbdef](https://github.com/DeadNews/deadnews-template-python/commit/7bcbdef85e19077b64d4c4f349f374d56536eba6))
-- _(deps)_ Update pypa/gh-action-pypi-publish action to v1.8.10 ([#99](https://github.com/DeadNews/deadnews-template-python/issues/99)) - ([3a1b4ea](https://github.com/DeadNews/deadnews-template-python/commit/3a1b4ea8c66016f3c39957e4a617a8a6a5769dce))
-- _(deps)_ Update pre-commit hooks ([#98](https://github.com/DeadNews/deadnews-template-python/issues/98)) - ([439caa5](https://github.com/DeadNews/deadnews-template-python/commit/439caa51ec9f7f4408d779347115ccdae1322b53))
-- _(deps)_ Update pypa/gh-action-pypi-publish action to v1.8.8 ([#96](https://github.com/DeadNews/deadnews-template-python/issues/96)) - ([6d0b8ff](https://github.com/DeadNews/deadnews-template-python/commit/6d0b8ff33994f40af8f7d1f895c3664484d5bd73))
-- _(deps)_ Update pre-commit hooks ([#95](https://github.com/DeadNews/deadnews-template-python/issues/95)) - ([f80e638](https://github.com/DeadNews/deadnews-template-python/commit/f80e638205768619ce55759ee04ff3b8da140ba7))
-- _(deps)_ Update pypa/gh-action-pypi-publish action to v1.8.7 ([#92](https://github.com/DeadNews/deadnews-template-python/issues/92)) - ([2e74022](https://github.com/DeadNews/deadnews-template-python/commit/2e740224ab082f7e7374e8688f3d533469c3464d))
-- _(deps)_ Update pre-commit hooks ([#91](https://github.com/DeadNews/deadnews-template-python/issues/91)) - ([0327dc1](https://github.com/DeadNews/deadnews-template-python/commit/0327dc139fe0d37aafa784f25677ae8a307c6c47))
-- _(deps)_ Update pre-commit hooks ([#90](https://github.com/DeadNews/deadnews-template-python/issues/90)) - ([0f81f6e](https://github.com/DeadNews/deadnews-template-python/commit/0f81f6eb7ca9c93b2ab52d99400d2c3ecdf46d55))
-- _(deps)_ Update codecov/codecov-action action to v3.1.4 ([#79](https://github.com/DeadNews/deadnews-template-python/issues/79)) - ([03b6308](https://github.com/DeadNews/deadnews-template-python/commit/03b630895ea88968443f318ea87820cb8406db3c))
 - _(pre-commit)_ Add `hadolint` hook - ([82ef6d3](https://github.com/DeadNews/deadnews-template-python/commit/82ef6d3e28c0fcca77642877e4b36640aa39e7f3))
 - _(pre-commit)_ Use `black` mirror - ([933f093](https://github.com/DeadNews/deadnews-template-python/commit/933f093e6289dabef80424fd81a6047613922a9b))
 - _(pre-commit)_ Add `typos` hook - ([3d27c7a](https://github.com/DeadNews/deadnews-template-python/commit/3d27c7a3559c3c59942096aa9a958f7a7e2001e3))
