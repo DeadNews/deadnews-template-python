@@ -1,11 +1,10 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-
 ## [unreleased]
 
 ### 📚 Documentation
 
+- _(changelog)_ add `git-cliff` - ([1e6d150](https://github.com/DeadNews/deadnews-template-python/commit/1e6d150e6be3d205f35d467d4465dcfd58e25e98))
 - _(changelog)_ add `git-cliff` - ([08ffe00](https://github.com/DeadNews/deadnews-template-python/commit/08ffe00659c9de6045842c55fb8b475f84cd5e50))
 - _(changelog)_ add `git-cliff` - ([0e898d8](https://github.com/DeadNews/deadnews-template-python/commit/0e898d87ca32c7bdc0e7c21a77ca67c2ec2addcd))
 - _(changelog)_ add `git-cliff` - ([f2285bf](https://github.com/DeadNews/deadnews-template-python/commit/f2285bf2f51eaeab3905d4a3559a4d7f044b8851))
