@@ -78,8 +78,10 @@ commit_preprocessors = [
   # { pattern = '.*', replace_command = 'typos --write-changes -' },
 ]
 # regex for parsing and grouping commits
+# TODO: split "^chore|^ci" into separate groups
 commit_parsers = [
   { message = "^feat", group = "<!-- 0 -->🚀 Features" },
+  { message = "^fix\\(deps.*\\)", group = "<!-- 5 -->⬆️ Dependencies" },
   { message = "^fix", group = "<!-- 1 -->🐛 Bug Fixes" },
   { message = "^doc", group = "<!-- 3 -->📚 Documentation" },
   { message = "^perf", group = "<!-- 4 -->⚡ Performance" },
@@ -92,8 +94,9 @@ commit_parsers = [
   { message = "^chore\\(release\\): prepare for", skip = true },
   { message = "^chore\\(pr\\)", skip = true },
   { message = "^chore\\(pull\\)", skip = true },
-  { message = "^build", group = "<!-- 7 -->🏗 Build" },
-  { message = "^chore|^ci", group = "<!-- 8 -->⚙️ Miscellaneous Tasks" },
+  { message = "^build", group = "<!-- 7 -->👷 Build" },
+  { message = "^chore", group = "<!-- 8 -->⚙️ Chores" },
+  { message = "^ci", group = "<!-- 8 -->⚙️ CI" },
   { body = ".*security", group = "<!-- 9 -->🛡️ Security" },
   { message = "^revert", group = "<!-- 9 -->◀️ Revert" },
 ]
