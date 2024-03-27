@@ -61,7 +61,7 @@ commit_preprocessors = [
 ]
 commit_parsers = [
   { message = "^(ci|build|chore)\\(deps.*\\)", skip = true },
-  { message = "^chore\\(release\\): prepare for", skip = true },
+  { message = "^chore\\(release\\)", skip = true },
   { message = "^fix\\(deps.*\\)", group = "<!-- 92 -->⬆️ Dependencies" },
   { message = "^feat", group = "<!-- 0 -->🚀 Features" },
   { message = "^fix", group = "<!-- 1 -->🐛 Bug Fixes" },
