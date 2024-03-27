@@ -61,25 +61,25 @@ commit_preprocessors = [
 ]
 commit_parsers = [
   { message = "^feat", group = "<!-- 0 -->✨ Features" },
-  { message = "^fix\\(deps.*\\)", group = "<!-- 2 -->⬆️ Dependencies" },
+  { message = "^fix\\(deps.*\\)", group = "<!-- 9 -->⬆️ Dependencies" },
   { message = "^fix", group = "<!-- 1 -->🐛 Bug Fixes" },
   { message = "^doc", group = "<!-- 4 -->📚 Documentation" },
   { message = "^perf", group = "<!-- 4 -->⚡ Performance" },
   { message = "^refactor", group = "<!-- 3 -->🚜 Refactor" },
-  { message = "^style", group = "<!-- 5 -->🎨 Styling" },
-  { message = "^test", group = "<!-- 6 -->🧪 Testing" },
+  { message = "^style", group = "<!-- 6 -->🎨 Styling" },
+  { message = "^test", group = "<!-- 5 -->🧪 Testing" },
   { message = "^(ci|build|chore)\\(deps.*\\)", skip = true },
   { message = "^chore\\(release\\): prepare for", skip = true },
-  { message = "^build", group = "<!-- 7 -->👷 Build" },
-  { message = "^chore", group = "<!-- 8 -->🧹 Chores" },
-  { message = "^ci", group = "<!-- 8 -->⚙️ CI" },
-  { body = ".*security", group = "<!-- 9 -->🛡️ Security" },
-  { message = "^revert", group = "<!-- 9 -->◀️ Revert" },
+  { message = "^build", group = "<!-- 5 -->👷 Build" },
+  { message = "^chore", group = "<!-- 7 -->🧹 Chores" },
+  { message = "^ci", group = "<!-- 7 -->⚙️ CI" },
+  { body = ".*security", group = "<!-- 8 -->🛡️ Security" },
+  { message = "^revert", group = "<!-- 8 -->◀️ Revert" },
 ]
 protect_breaking_commits = true
 filter_commits = false # filter out the commits that are not matched by commit parsers
 tag_pattern = "v[0-9].*" # regex for matching git tags
-skip_tags = "unreleased" # drop commits from the changelog
+skip_tags = "" # drop commits from the changelog
 ignore_tags = "rc|beta|alpha" # include ignored commits into the next tag
 topo_order = false # sort the tags topologically
 sort_commits = "newest" # sort the commits inside sections by oldest/newest order
