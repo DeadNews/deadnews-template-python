@@ -60,22 +60,18 @@ commit_preprocessors = [
   { pattern = '\((\w+\s)?#([0-9]+)\)', replace = "([#${2}](<REPO>/issues/${2}))" },
 ]
 commit_parsers = [
-  { message = "^feat", group = "<!-- 0 -->🚀 Features" },
-  { message = "^fix\\(deps.*\\)", group = "<!-- 5 -->⬆️ Dependencies" },
+  { message = "^feat", group = "<!-- 0 -->✨ Features" },
+  { message = "^fix\\(deps.*\\)", group = "<!-- 2 -->⬆️ Dependencies" },
   { message = "^fix", group = "<!-- 1 -->🐛 Bug Fixes" },
-  { message = "^doc", group = "<!-- 3 -->📚 Documentation" },
+  { message = "^doc", group = "<!-- 4 -->📚 Documentation" },
   { message = "^perf", group = "<!-- 4 -->⚡ Performance" },
-  { message = "^refactor", group = "<!-- 2 -->🚜 Refactor" },
+  { message = "^refactor", group = "<!-- 3 -->🚜 Refactor" },
   { message = "^style", group = "<!-- 5 -->🎨 Styling" },
   { message = "^test", group = "<!-- 6 -->🧪 Testing" },
-  { message = "^ci\\(deps.*\\)", skip = true },
-  { message = "^build\\(deps.*\\)", skip = true },
-  { message = "^chore\\(deps.*\\)", skip = true },
+  { message = "^(ci|build|chore)\\(deps.*\\)", skip = true },
   { message = "^chore\\(release\\): prepare for", skip = true },
-  { message = "^chore\\(pr\\)", skip = true },
-  { message = "^chore\\(pull\\)", skip = true },
   { message = "^build", group = "<!-- 7 -->👷 Build" },
-  { message = "^chore", group = "<!-- 8 -->⚙️ Chores" },
+  { message = "^chore", group = "<!-- 8 -->🧹 Chores" },
   { message = "^ci", group = "<!-- 8 -->⚙️ CI" },
   { body = ".*security", group = "<!-- 9 -->🛡️ Security" },
   { message = "^revert", group = "<!-- 9 -->◀️ Revert" },
@@ -83,8 +79,7 @@ commit_parsers = [
 protect_breaking_commits = true
 filter_commits = false # filter out the commits that are not matched by commit parsers
 tag_pattern = "v[0-9].*" # regex for matching git tags
-skip_tags = "" # drop commits from the changelog
+skip_tags = "unreleased" # drop commits from the changelog
 ignore_tags = "rc|beta|alpha" # include ignored commits into the next tag
 topo_order = false # sort the tags topologically
 sort_commits = "newest" # sort the commits inside sections by oldest/newest order
-# limit_commits = 42 # limit the number of commits included in the changelog

@@ -2,8 +2,13 @@
 
 ## [unreleased]
 
+### ⬆️ Dependencies
+
+- _(deps)_ update dependency uvicorn to ^0.29.0 ([#192](https://github.com/DeadNews/deadnews-template-python/issues/192)) - ([375e518](https://github.com/DeadNews/deadnews-template-python/commit/375e5184218c51dfe7a7aaaeda91ef59ed9e0365))
+
 ### 📚 Documentation
 
+- _(changelog)_ add `git-cliff` - ([b522038](https://github.com/DeadNews/deadnews-template-python/commit/b52203826299280a1b11a0ab929458d46db7aeec))
 - _(changelog)_ add `git-cliff` - ([1e6d150](https://github.com/DeadNews/deadnews-template-python/commit/1e6d150e6be3d205f35d467d4465dcfd58e25e98))
 - _(changelog)_ add `git-cliff` - ([08ffe00](https://github.com/DeadNews/deadnews-template-python/commit/08ffe00659c9de6045842c55fb8b475f84cd5e50))
 - _(changelog)_ add `git-cliff` - ([0e898d8](https://github.com/DeadNews/deadnews-template-python/commit/0e898d87ca32c7bdc0e7c21a77ca67c2ec2addcd))
@@ -22,24 +27,20 @@
 - _(readme)_ update - ([2a822aa](https://github.com/DeadNews/deadnews-template-python/commit/2a822aa8019887e70b5ad9ffb014f856e18bbb5d))
 - _(readme)_ update - ([abe2954](https://github.com/DeadNews/deadnews-template-python/commit/abe29549c25045a2438779c2bde974af16d7976a))
 
-### ⬆️ Dependencies
-
-- _(deps)_ update dependency uvicorn to ^0.29.0 ([#192](https://github.com/DeadNews/deadnews-template-python/issues/192)) - ([375e518](https://github.com/DeadNews/deadnews-template-python/commit/375e5184218c51dfe7a7aaaeda91ef59ed9e0365))
-
-### ⚙️ Chores
+### 🧹 Chores
 
 - auto fixes from `pre-commit` hooks - ([31a82d1](https://github.com/DeadNews/deadnews-template-python/commit/31a82d12ff98831a5b2fab7dae58a5c2e5f052d1))
 - auto fixes from `pre-commit` hooks - ([9f82e3f](https://github.com/DeadNews/deadnews-template-python/commit/9f82e3fdd3dbc408874db39a5dbdcb9898fbb35a))
 
 ## [2.0.5](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.4...v2.0.5) - 2024-03-16
 
-### 📚 Documentation
-
-- _(mkdocs)_ add ([#187](https://github.com/DeadNews/deadnews-template-python/issues/187)) - ([44b5641](https://github.com/DeadNews/deadnews-template-python/commit/44b56417e0fc95a0382178ad3a0dcf22f6506aaf))
-
 ### ⬆️ Dependencies
 
 - _(deps)_ update dependency pydantic to v2.6.4 ([#188](https://github.com/DeadNews/deadnews-template-python/issues/188)) - ([2bed08d](https://github.com/DeadNews/deadnews-template-python/commit/2bed08de5f6571218725031e5bad2aa0d181ec56))
+
+### 📚 Documentation
+
+- _(mkdocs)_ add ([#187](https://github.com/DeadNews/deadnews-template-python/issues/187)) - ([44b5641](https://github.com/DeadNews/deadnews-template-python/commit/44b56417e0fc95a0382178ad3a0dcf22f6506aaf))
 
 ## [2.0.4](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.3...v2.0.4) - 2024-03-09
 
@@ -87,7 +88,7 @@
 - add `docker-pypy` build configuration ([#167](https://github.com/DeadNews/deadnews-template-python/issues/167)) - ([1bfac68](https://github.com/DeadNews/deadnews-template-python/commit/1bfac68e643eb4da03c4d778842b20f280a1dfd7))
 - add `pypy3.10` to tests matrix ([#160](https://github.com/DeadNews/deadnews-template-python/issues/160)) - ([6880177](https://github.com/DeadNews/deadnews-template-python/commit/6880177696a53f5b2ac9b0dc3175f435ee8c5795))
 
-### ⚙️ Chores
+### 🧹 Chores
 
 - update `ruff` settings - ([a3ca14e](https://github.com/DeadNews/deadnews-template-python/commit/a3ca14eb56b2794fd42fc302070b61d904d6e5ae))
 - update `ruff` settings - ([44a182c](https://github.com/DeadNews/deadnews-template-python/commit/44a182cad6ac23a0a9b90965c27520022c6ad775))
@@ -106,7 +107,7 @@
 - _(deps)_ update dependency fastapi to v0.104.1 ([#121](https://github.com/DeadNews/deadnews-template-python/issues/121)) - ([1c63e33](https://github.com/DeadNews/deadnews-template-python/commit/1c63e331f6e21f104e0effc78cb547d302e581de))
 - _(deps)_ update dependency fastapi to ^0.104.0 ([#120](https://github.com/DeadNews/deadnews-template-python/issues/120)) - ([51fd087](https://github.com/DeadNews/deadnews-template-python/commit/51fd0874f92234caad519e1e65c1a0b5b6b26c48))
 
-### ⚙️ Chores
+### 🧹 Chores
 
 - _(makefile)_ update - ([8f45816](https://github.com/DeadNews/deadnews-template-python/commit/8f458162ccd3d3b0de3a5b7b41b5a87f8442046a))
 - _(vscode)_ update settings ([#140](https://github.com/DeadNews/deadnews-template-python/issues/140)) - ([5875049](https://github.com/DeadNews/deadnews-template-python/commit/587504936db2997c3f8513dadc3a37f1cc6f8f95))
@@ -124,7 +125,7 @@
 
 ## [2.0.0](https://github.com/DeadNews/deadnews-template-python/compare/v1.0.2...v2.0.0) - 2023-10-03
 
-### 🚀 Features
+### ✨ Features
 
 - change the sample application ([#108](https://github.com/DeadNews/deadnews-template-python/issues/108)) - ([1291cdb](https://github.com/DeadNews/deadnews-template-python/commit/1291cdbd33b5dc3c284fc411fb13b156c1847c88))
 
@@ -164,7 +165,7 @@
 - try `.python-version` - ([d0b8832](https://github.com/DeadNews/deadnews-template-python/commit/d0b883266a824fa47cfe616565801ebd86082370))
 - create `settings.yml ` - ([938899c](https://github.com/DeadNews/deadnews-template-python/commit/938899cbbc742b044c07184a229908b30dee8cb1))
 
-### ⚙️ Chores
+### 🧹 Chores
 
 - specify python `target-version` - ([cecc630](https://github.com/DeadNews/deadnews-template-python/commit/cecc630609866a74a7e5bff061f557b463af7324))
 - update `coverage` config - ([040341c](https://github.com/DeadNews/deadnews-template-python/commit/040341c54f239ed36d45b8f86d0d5514cee44726))
@@ -179,7 +180,7 @@
 
 ## [1.0.2] - 2023-05-06
 
-### 🚀 Features
+### ✨ Features
 
 - _(ruff)_ add `ruff` linter - ([4f09a8f](https://github.com/DeadNews/deadnews-template-python/commit/4f09a8fc6d2b1cca63c287612bbeaf690f8f2973))
 - dev pr ([#69](https://github.com/DeadNews/deadnews-template-python/issues/69)) - ([785fa24](https://github.com/DeadNews/deadnews-template-python/commit/785fa246cabf4940567e8485661f7a4884d245b4))
@@ -206,7 +207,7 @@
 - try `snok/install-poetry` - ([0eaf70d](https://github.com/DeadNews/deadnews-template-python/commit/0eaf70dd0522d623ed7513f7e3e7ae042aefa17c))
 - try `trusted publishing` - ([c31a811](https://github.com/DeadNews/deadnews-template-python/commit/c31a8113913cc19099c9463c3c161b4080216d1c))
 
-### ⚙️ Chores
+### 🧹 Chores
 
 - _(pre-commit)_ disable `ko-poetry-audit-plugin` - ([d5d2a9f](https://github.com/DeadNews/deadnews-template-python/commit/d5d2a9f46cb3b8a264f40c474b0b2025e8ec0f40))
 - use all `ruff` rules - ([b8f54d6](https://github.com/DeadNews/deadnews-template-python/commit/b8f54d6c4aeab6cebffd64869676304fdb46db7e))
