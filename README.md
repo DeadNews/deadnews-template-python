@@ -2,14 +2,15 @@
 
 > Python Project Template
 
-[![PyPI version](https://img.shields.io/pypi/v/deadnews-template-python)](https://pypi.org/project/deadnews-template-python)
-[![GitHub Release](https://img.shields.io/github/v/release/deadnews/deadnews-template-python)](https://github.com/DeadNews/deadnews-template-python/releases/latest)
-[![Documentation](https://img.shields.io/badge/docs-github-blue.svg)](https://deadnews.github.io/deadnews-template-python)
-[![Main](https://github.com/DeadNews/deadnews-template-python/actions/workflows/main.yml/badge.svg)](https://github.com/DeadNews/deadnews-template-python/actions/workflows/main.yml)
-[![pre-commit.ci](https://results.pre-commit.ci/badge/github/DeadNews/deadnews-template-python/main.svg)](https://results.pre-commit.ci/latest/github/DeadNews/deadnews-template-python/main)
-[![codecov](https://codecov.io/gh/DeadNews/deadnews-template-python/branch/main/graph/badge.svg?token=OCZDZIYPMC)](https://codecov.io/gh/DeadNews/deadnews-template-python)
-[![Docker](https://github.com/DeadNews/deadnews-template-python/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/DeadNews/deadnews-template-python/actions/workflows/docker-publish.yml)
-[![image-size](https://ghcr-badge.egpl.dev/DeadNews/deadnews-template-python/size)](https://github.com/DeadNews/deadnews-template-python/pkgs/container/deadnews-template-python)
+[![PyPI version](https://img.shields.io/pypi/v/deadnews-template-python?logo=pypi&logoColor=white)](https://pypi.org/project/deadnews-template-python)
+[![GitHub Release](https://img.shields.io/github/v/release/deadnews/deadnews-template-python?logo=github&logoColor=white)](https://github.com/deadnews/deadnews-template-python/releases/latest)
+[![Documentation](https://img.shields.io/badge/documentation-gray.svg?logo=materialformkdocs&logoColor=white)](https://deadnews.github.io/deadnews-template-python)
+[![Changelog](https://img.shields.io/badge/changelog-gray.svg?logo=github&logoColor=white)](https://github.com/deadnews/deadnews-template-python/blob/main/CHANGELOG.md)
+[![Main](https://img.shields.io/github/actions/workflow/status/deadnews/deadnews-template-python/main.yml?branch=main&logo=github&logoColor=white&label=main)](https://github.com/deadnews/deadnews-template-python/actions/workflows/main.yml)
+[![pre-commit.ci](https://results.pre-commit.ci/badge/github/deadnews/deadnews-template-python/main.svg)](https://results.pre-commit.ci/latest/github/deadnews/deadnews-template-python/main)
+[![coverage](https://img.shields.io/codecov/c/github/deadnews/deadnews-template-python?token=OCZDZIYPMC&logo=codecov&logoColor=white)](https://codecov.io/gh/deadnews/deadnews-template-python)
+[![Docker: ghcr](https://img.shields.io/badge/docker-ghcr-blue.svg?logo=github&logoColor=white)](https://github.com/deadnews/deadnews-template-python/pkgs/container/deadnews-template-python)
+[![Docker: image-size](https://ghcr-badge.egpl.dev/deadnews/deadnews-template-python/size?color=%230e80c0)](https://github.com/deadnews/deadnews-template-python/pkgs/container/deadnews-template-python)
 
 ## Installation
 

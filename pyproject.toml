@@ -9,13 +9,11 @@ description = "Python Project Template"
 authors = ["DeadNews <aurczpbgr@mozmail.com>"]
 license = "MIT"
 readme = "README.md"
+homepage = "https://github.com/deadnews/deadnews-template-python"
 repository = "https://github.com/deadnews/deadnews-template-python"
 documentation = "https://deadnews.github.io/deadnews-template-python"
 keywords = ["python", "template", "layout"]
 classifiers = ["Operating System :: OS Independent"]
-
-[tool.poetry.urls]
-changelog = "https://github.com/deadnews/deadnews-template-python/blob/main/CHANGELOG.md"
 
 [tool.poetry.scripts]
 deadnews-template-python = "deadnews_template_python.__main__:main"
