@@ -3,10 +3,10 @@ name: Main
 on:
   push:
     branches: [main]
+    tags:
+      - "v*"
   pull_request:
     branches: [main]
-  release:
-    types: [created]
 
 permissions:
   contents: read
@@ -63,9 +63,9 @@ jobs:
         if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.12'
         uses: codecov/codecov-action@4fe8c5f003fae66aa5ebb77cfd3e7bfbbda0b6b0 # v3.1.5
 
-  publish-pypi:
+  pypi-deploy:
     name: Release to PyPI
-    if: github.event_name == 'release' && github.event.action == 'created'
+    if: github.ref_type == 'tag'
     needs: [lint, tests]
     permissions:
       id-token: write
@@ -87,9 +87,35 @@ jobs:
       - name: Publish package to PyPI
         uses: pypa/gh-action-pypi-publish@81e9d935c883d0b210363ab89cf05f3894778450 # v1.8.14
 
+  github-deploy:
+    name: Release to GitHub
+    runs-on: ubuntu-latest
+    if: github.ref_type == 'tag'
+    needs: [lint, tests]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check prerelease
+        run: |
+          if [[ ${{ github.ref }} =~ (alpha|beta|rc) ]]; then
+            echo "PRERELEASE=true" >> $GITHUB_ENV
+          else
+            echo "PRERELEASE=false" >> $GITHUB_ENV
+          fi
+
+      - name: Create GitHub Release
+        run: |
+          gh release create $GITHUB_REF \
+            --title "$GITHUB_REF_NAME" \
+            --notes "See https://github.com/${GITHUB_REPOSITORY}/blob/main/CHANGELOG.md for all changes." \
+            --draft ${PRERELEASE} \
+            --prerelease ${PRERELEASE}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   docs-build:
     name: Build docs
-    if: github.event_name == 'release' && github.event.action == 'created'
+    if: github.ref_type == 'tag'
     needs: [lint, tests]
     runs-on: ubuntu-latest
     steps:
@@ -120,7 +146,7 @@ jobs:
 
   docs-deploy:
     name: Deploy docs
-    if: github.event.release.prerelease != true
+    if: true && !contains(github.ref, 'alpha')
     needs: [docs-build]
     environment:
       name: github-pages
@@ -133,31 +159,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  changelog:
-    name: Generate changelog
-    if: startsWith(github.ref, 'refs/tags/')
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Generate a changelog
-        uses: orhun/git-cliff-action@v3
-        with:
-          config: cliff.toml
-          args: --verbose
-        env:
-          OUTPUT: CHANGELOG.md
-
-      - name: Commit
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          set +e
-          git add CHANGELOG.md
-          git commit -m "chore(release): update changelog"
-          BRANCH_NAME=$(git branch -r --contains tags/$GITHUB_REF | sed 's/origin\///')
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git $BRANCH_NAME
