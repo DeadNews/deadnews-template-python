@@ -28,3 +28,24 @@ docs:
 
 run:
 	poetry run uvicorn --reload deadnews_template_python:app
+
+get-version:
+	git cliff --bumped-version
+
+# make release-tag_name
+# make release-v1.0.0-alpha.0
+release-%: checks
+	git cliff -o CHANGELOG.md --tag $*
+	git add CHANGELOG.md
+	git commit -m "chore(release): update changelog for $*"
+	git push
+	git tag --sign -a $* -m "chore(release): $*"
+	git push --tags
+
+
+# push tags
+push-tags:
+	git push origin HEAD:refs/heads/main
+	git push origin HEAD:refs/heads/main --tags
+
+# git push origin "$BRANCH_NAME"
