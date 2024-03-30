@@ -38,6 +38,7 @@
 
 ### ⚙️ CI/CD
 
+- _(github)_ update github release command - ([566657f](https://github.com/DeadNews/deadnews-template-python/commit/566657f82ad9818ae00f8f94454ef9195ea641e1))
 - _(github)_ update workflows for tag-based releases - ([34cfd53](https://github.com/DeadNews/deadnews-template-python/commit/34cfd53f06894c74062c2a842f2fe0151659986b))
 
 ### ⬆️ Dependencies
