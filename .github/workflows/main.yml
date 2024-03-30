@@ -109,8 +109,8 @@ jobs:
           gh release create $GITHUB_REF_NAME \
             --title "$GITHUB_REF_NAME" \
             --notes "See https://github.com/${GITHUB_REPOSITORY}/blob/main/CHANGELOG.md for all changes." \
-            --draft ${PRERELEASE} \
-            --prerelease ${PRERELEASE}
+            --draft=${PRERELEASE} \
+            --prerelease=${PRERELEASE}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
