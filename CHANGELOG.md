@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.6-alpha.1](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.5...v2.0.6-alpha.1) - 2024-03-30
+## [2.0.6-alpha.2](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.5...v2.0.6-alpha.2) - 2024-03-30
 
 ### 📚 Documentation
 
