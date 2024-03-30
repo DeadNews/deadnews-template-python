@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.6-alpha.5](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.5...v2.0.6-alpha.5) - 2024-03-30
+## [2.0.6-alpha.6](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.5...v2.0.6-alpha.6) - 2024-03-30
 
 ### 📚 Documentation
 
@@ -38,6 +38,8 @@
 
 ### ⚙️ CI/CD
 
+- _(github)_ update github release command - ([feac2d4](https://github.com/DeadNews/deadnews-template-python/commit/feac2d4c9a5da584b707806cad4d9f6f5e29e096))
+- _(github)_ update github release command - ([6232806](https://github.com/DeadNews/deadnews-template-python/commit/62328066ca12fefbe2ec79178d35206b5e437548))
 - _(github)_ update github release command - ([b93e2d9](https://github.com/DeadNews/deadnews-template-python/commit/b93e2d94fd6570a5a2fafda44a97b03149c5f8f6))
 - _(github)_ update github release command - ([af1e64c](https://github.com/DeadNews/deadnews-template-python/commit/af1e64c5cb39106da4575c6c4fe54c1da6be956f))
 - _(github)_ update github release command - ([566657f](https://github.com/DeadNews/deadnews-template-python/commit/566657f82ad9818ae00f8f94454ef9195ea641e1))
