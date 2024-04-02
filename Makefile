@@ -39,6 +39,6 @@ release-%: checks
 	git add CHANGELOG.md
 	git commit -m "chore(release): prepare for $*"
 	git push
-	git tag --sign -a $* -m "chore(release): $*"
+	git tag -a $* -m "chore(release): $*"
 	git push --tags
 	git tag --verify $*
