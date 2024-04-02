@@ -91,7 +91,7 @@ jobs:
     name: Release to GitHub
     if: github.ref_type == 'tag'
     needs: [lint, tests]
-    environment: github-release
+    environment: github-releases
     permissions:
       contents: write
     runs-on: ubuntu-latest
