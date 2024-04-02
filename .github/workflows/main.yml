@@ -145,7 +145,7 @@ jobs:
 
   docs-deploy:
     name: Deploy docs
-    if: true
+    if: true && !contains(github.ref, 'alpha')
     needs: [docs-build]
     environment:
       name: github-pages
