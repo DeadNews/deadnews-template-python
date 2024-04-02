@@ -2,7 +2,7 @@
 
 # deadnews-template-python
 
-_Python Project Template_
+Python Project Template
 
 [![PyPI: Version](https://img.shields.io/pypi/v/deadnews-template-python?logo=pypi&logoColor=white)](https://pypi.org/project/deadnews-template-python)
 [![GitHub: Release](https://img.shields.io/github/v/release/deadnews/deadnews-template-python?logo=github&logoColor=white)](https://github.com/deadnews/deadnews-template-python/releases/latest)
