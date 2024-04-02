@@ -1,5 +1,5 @@
 FROM python:3.12.2-alpine@sha256:25a82f6f8b720a6a257d58e478a0a5517448006e010c85273f4d9c706819478c as base
-LABEL maintainer "DeadNews <aurczpbgr@mozmail.com>"
+LABEL maintainer "DeadNews <deadnewsgit@gmail.com>"
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
