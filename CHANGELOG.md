@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.6-alpha.8](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.5...v2.0.6-alpha.8) - 2024-04-02
+## [2.0.6-alpha.9](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.5...v2.0.6-alpha.9) - 2024-04-02
 
 ### 📚 Documentation
 
@@ -40,6 +40,9 @@
 
 ### ⚙️ CI/CD
 
+- _(github)_ update github release command - ([9fdcec5](https://github.com/DeadNews/deadnews-template-python/commit/9fdcec5ec9519c79fa5da67cd258422505f80082))
+- _(github)_ update github release command - ([f503f23](https://github.com/DeadNews/deadnews-template-python/commit/f503f231ea07ae5a9231f3d67afae6937830839f))
+- _(github)_ update github release command - ([a6c1a58](https://github.com/DeadNews/deadnews-template-python/commit/a6c1a5899dd2bdad37ab1218b592e401e05aca80))
 - _(github)_ update github release command - ([aee493a](https://github.com/DeadNews/deadnews-template-python/commit/aee493a4f95e08f185c7c25634dbd36c3040c282))
 - _(github)_ update github release command - ([2c3ce85](https://github.com/DeadNews/deadnews-template-python/commit/2c3ce85e30b58ff13445d136c630287e2d340851))
 - _(github)_ update github release command - ([feac2d4](https://github.com/DeadNews/deadnews-template-python/commit/feac2d4c9a5da584b707806cad4d9f6f5e29e096))
