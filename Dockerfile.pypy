@@ -1,5 +1,5 @@
 FROM pypy:3.10-slim@sha256:7202bb2a7893515f1f58b1ac7eca79e1986299c11ad7284a29aec396eba49213 as base
-LABEL maintainer "DeadNews <aurczpbgr@mozmail.com>"
+LABEL maintainer "DeadNews <deadnewsgit@gmail.com>"
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
