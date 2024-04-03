@@ -29,7 +29,7 @@ docs:
 run:
 	poetry run uvicorn --reload deadnews_template_python:app
 
-get-next:
+bumped:
 	git cliff --bumped-version
 
 # make release-tag_name
