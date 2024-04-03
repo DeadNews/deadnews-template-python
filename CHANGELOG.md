@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.7-beta.0](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.6...v2.0.7-beta.0) - 2024-04-03
+## [2.0.7-beta.1](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.6...v2.0.7-beta.1) - 2024-04-03
 
 ### 📚 Documentation
 
@@ -12,6 +12,7 @@
 
 ### ⚙️ CI/CD
 
+- _(github)_ test `onlatest` flag to flavor in `docker-publish` - ([afdeb22](https://github.com/DeadNews/deadnews-template-python/commit/afdeb22b906aec252cc96ccd96d76ac2799ca60f))
 - _(github)_ test `onlatest` flag to flavor in `docker-publish` - ([af71000](https://github.com/DeadNews/deadnews-template-python/commit/af71000d6fb7d676da97c231b3c83486ba43cf8e))
 
 ## [2.0.6](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.5...v2.0.6) - 2024-04-02
