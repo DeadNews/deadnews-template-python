@@ -1,19 +1,10 @@
 # Changelog
 
-## [2.0.7-beta.1](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.6...v2.0.7-beta.1) - 2024-04-03
+## [2.0.7](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.6...v2.0.7) - 2024-04-03
 
 ### 📚 Documentation
 
-- _(changelog)_ update `git-cliff` config - ([f5306a6](https://github.com/DeadNews/deadnews-template-python/commit/f5306a6e47b57137fa372b6698907bcd7913f162))
-- _(changelog)_ update `git-cliff` config - ([c221f00](https://github.com/DeadNews/deadnews-template-python/commit/c221f0089f5e4eee8e5bb16b447c9179ccbddc46))
-- _(readme)_ update badges - ([82fe5cd](https://github.com/DeadNews/deadnews-template-python/commit/82fe5cd0414a5077ca8d6de3f2fdc69eb40c3104))
-- _(readme)_ update badges - ([68dc35e](https://github.com/DeadNews/deadnews-template-python/commit/68dc35efd031e4ef0ee5c181505daa0b515518f8))
-- _(readme)_ update badges - ([aa9d034](https://github.com/DeadNews/deadnews-template-python/commit/aa9d0343d8172e12a1fbb05ea244068469bb702d))
-
-### ⚙️ CI/CD
-
-- _(github)_ test `onlatest` flag to flavor in `docker-publish` - ([afdeb22](https://github.com/DeadNews/deadnews-template-python/commit/afdeb22b906aec252cc96ccd96d76ac2799ca60f))
-- _(github)_ test `onlatest` flag to flavor in `docker-publish` - ([af71000](https://github.com/DeadNews/deadnews-template-python/commit/af71000d6fb7d676da97c231b3c83486ba43cf8e))
+- _(changelog)_ update `git-cliff` config ([#203](https://github.com/DeadNews/deadnews-template-python/issues/203)) - ([93385bc](https://github.com/DeadNews/deadnews-template-python/commit/93385bcccfc6f5b358c9020a4c59c6abeed2b8f9))
 
 ## [2.0.6](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.5...v2.0.6) - 2024-04-02
 
