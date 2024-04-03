@@ -1,8 +1,6 @@
-<div align="center">
-
 # deadnews-template-python
 
-Python Project Template
+> Python Project Template
 
 [![PyPI: Version](https://img.shields.io/pypi/v/deadnews-template-python?logo=pypi&logoColor=white)](https://pypi.org/project/deadnews-template-python)
 [![GitHub: Release](https://img.shields.io/github/v/release/deadnews/deadnews-template-python?logo=github&logoColor=white)](https://github.com/deadnews/deadnews-template-python/releases/latest)
@@ -15,8 +13,6 @@ Python Project Template
 [![CI: main](https://img.shields.io/github/actions/workflow/status/deadnews/deadnews-template-python/main.yml?branch=main&logo=github&logoColor=white&label=main)](https://github.com/deadnews/deadnews-template-python/actions/workflows/main.yml)
 [![CI: pre-commit](https://results.pre-commit.ci/badge/github/DeadNews/deadnews-template-python/main.svg)](https://results.pre-commit.ci/latest/github/deadnews/deadnews-template-python/main)
 [![Coverage](https://img.shields.io/codecov/c/github/deadnews/deadnews-template-python?token=OCZDZIYPMC&logo=codecov&logoColor=white)](https://codecov.io/gh/deadnews/deadnews-template-python)
-
-</div>
 
 ## Installation
 
