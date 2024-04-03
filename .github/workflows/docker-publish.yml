@@ -25,4 +25,4 @@ jobs:
       dockerfile: Dockerfile.pypy
       flavor: |
         suffix=-pypy,onlatest=true
-        latest=false
+        latest=true
