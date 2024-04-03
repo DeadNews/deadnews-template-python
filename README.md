@@ -24,4 +24,6 @@ Docker
 
 ```sh
 docker pull ghcr.io/deadnews/deadnews-template-python:latest
+# or
+docker pull ghcr.io/deadnews/deadnews-template-python:latest-pypy
 ```
