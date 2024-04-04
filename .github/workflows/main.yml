@@ -96,7 +96,7 @@ jobs:
       contents: write
     env:
       CHANGELOG: https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md
-      PRERELEASE: ${{ contains(github.ref, 'alpha') || contains(github.ref, 'beta') || contains(github.ref, 'rc') }}
+      PRERELEASE: ${{ contains(github.ref, 'alpha') || contains(github.ref, 'beta') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
