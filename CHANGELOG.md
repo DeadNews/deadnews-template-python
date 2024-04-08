@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.8](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.7...v2.0.8) - 2024-04-08
+
+### 📚 Documentation
+
+- _(readme)_ update badges - ([eb7c16b](https://github.com/DeadNews/deadnews-template-python/commit/eb7c16b9fb74cbc8c02864ca3f52cb62edac1769))
+
+### ⚙️ CI/CD
+
+- _(github)_ update `github-deploy` job ([#204](https://github.com/DeadNews/deadnews-template-python/issues/204)) - ([fd8c17e](https://github.com/DeadNews/deadnews-template-python/commit/fd8c17ee960b6650349ae19421a8fa6f7b57326e))
+
 ## [2.0.7](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.6...v2.0.7) - 2024-04-03
 
 ### 📚 Documentation
