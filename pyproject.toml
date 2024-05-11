@@ -27,8 +27,8 @@ uvicorn = { version = "^0.29.0", extras = ["standard"] }
 [tool.poetry.group.lint.dependencies]
 mypy = "^1.10.0"
 poethepoet = "^0.26.1"
-pyright = "^1.1.361"
-ruff = "^0.4.3"
+pyright = "^1.1.362"
+ruff = "^0.4.4"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.2.0"
@@ -41,7 +41,7 @@ mkdocs-gen-files = "^0.5.0"
 mkdocs-literate-nav = "^0.6.1"
 mkdocs-material = "^9.5.21"
 mkdocs-swagger-ui-tag = "^0.6.10"
-mkdocstrings = "^0.25.0"
+mkdocstrings = "^0.25.1"
 mkdocstrings-python = "^1.10.0"
 
 [tool.poetry-dynamic-versioning]
