@@ -177,7 +177,7 @@
 - _(pre-commit)_ use `digest pinning` - ([fbca217](https://github.com/DeadNews/deadnews-template-python/commit/fbca217fbdde7e7d6cf2b55f7d664d4ec280ea1f))
 - try `pinDigests` - ([ff97b73](https://github.com/DeadNews/deadnews-template-python/commit/ff97b731ac054580206906c450ad9f05868ea250))
 
-## [1.0.2] - 2023-05-06
+## [1.0.2](https://github.com/DeadNews/deadnews-template-python/commits/v1.0.2) - 2023-05-06
 
 ### 🚀 Features
 
