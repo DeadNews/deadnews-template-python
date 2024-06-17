@@ -1,4 +1,4 @@
-FROM python:3.12.3-alpine@sha256:ef097620baf1272e38264207003b0982285da3236a20ed829bf6bbf1e85fe3cb as base
+FROM python:3.12.4-alpine@sha256:a982997504b8ec596f553d78f4de4b961bbdf5254e0177f6e99bb34f4ef16f95 as base
 LABEL maintainer "DeadNews <deadnewsgit@gmail.com>"
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
@@ -51,7 +51,7 @@ RUN pip install /app/*.whl
 
 USER guest:users
 EXPOSE ${UVICORN_PORT}
-HEALTHCHECK --interval=60s --timeout=3s \
+HEALTHCHECK --interval=60s --retries=3 --timeout=10s --start-period=60s \
     CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:${UVICORN_PORT}/health || exit 1
 
 CMD [ "python", "-m", "uvicorn", "deadnews_template_python:app" ]
