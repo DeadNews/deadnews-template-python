@@ -1,5 +1,5 @@
-FROM python:3.12.4-alpine@sha256:a982997504b8ec596f553d78f4de4b961bbdf5254e0177f6e99bb34f4ef16f95 as base
-LABEL maintainer "DeadNews <deadnewsgit@gmail.com>"
+FROM python:3.12.4-alpine@sha256:0bd77ae937dce9037e136ab35f41eaf9e012cfd741fc3c8dd4b3e2b63499f12c AS base
+LABEL maintainer="DeadNews <deadnewsgit@gmail.com>"
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
@@ -12,7 +12,7 @@ ENV PIP_DEFAULT_TIMEOUT=100 \
 
 WORKDIR /app
 
-FROM base as py-builder
+FROM base AS py-builder
 
 # renovate: datasource=pypi dep_name=poetry
 ENV POETRY_VERSION="1.8.3"
@@ -38,7 +38,7 @@ RUN --mount=type=cache,target=${POETRY_CACHE_DIR} \
     poetry install --only=main --no-root && \
     poetry build
 
-FROM base as runtime
+FROM base AS runtime
 
 ENV UVICORN_PORT=8000 \
     UVICORN_HOST=0.0.0.0 \
@@ -51,7 +51,7 @@ RUN pip install /app/*.whl
 
 USER guest:users
 EXPOSE ${UVICORN_PORT}
-HEALTHCHECK --interval=60s --retries=3 --timeout=10s --start-period=60s \
+HEALTHCHECK --interval=1m --retries=3 --timeout=10s --start-period=1m \
     CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:${UVICORN_PORT}/health || exit 1
 
 CMD [ "python", "-m", "uvicorn", "deadnews_template_python:app" ]
