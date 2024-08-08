@@ -1,4 +1,4 @@
-FROM pypy:3.10-slim@sha256:7202bb2a7893515f1f58b1ac7eca79e1986299c11ad7284a29aec396eba49213 AS base
+FROM pypy:3.10-slim@sha256:8fb8431a68aacf652db50a5aeafcfb04b9f66e67b5d6a2bd848d4dfa100be4f8 AS base
 LABEL maintainer="DeadNews <deadnewsgit@gmail.com>"
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
