@@ -17,11 +17,3 @@ jobs:
   docker:
     name: Docker
     uses: deadnews/deadnews-template-docker/.github/workflows/docker-reusable.yml@main
-
-  docker-pypy:
-    name: Docker PyPy
-    uses: deadnews/deadnews-template-docker/.github/workflows/docker-reusable.yml@main
-    with:
-      dockerfile: Dockerfile.pypy
-      flavor: |
-        suffix=-pypy,onlatest=true
