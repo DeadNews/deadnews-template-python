@@ -2,15 +2,16 @@ import random
 from typing import TYPE_CHECKING
 
 import pytest
-from deadnews_template_python.app import HEALTH, HELLO_WORLD, ITEMS, app
 from starlette import status
 from starlette.testclient import TestClient
+
+from deadnews_template_python.app import HEALTH, HELLO_WORLD, ITEMS, app
 
 if TYPE_CHECKING:
     from httpx import Response
 
 
-@pytest.fixture()
+@pytest.fixture
 def client() -> TestClient:
     return TestClient(app)
 
