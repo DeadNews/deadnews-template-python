@@ -53,5 +53,4 @@ USER guest:users
 EXPOSE ${UVICORN_PORT}
 HEALTHCHECK NONE
 
-ENTRYPOINT [ "python", "-m", "uvicorn" ]
-CMD [ "deadnews_template_python:app" ]
+CMD [ "python", "-m", "uvicorn", "deadnews_template_python:app" ]
