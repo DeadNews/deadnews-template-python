@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.9-alpha.0](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.8...v2.0.9-alpha.0) - 2024-08-18
+## [2.0.9](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.8...v2.0.9) - 2024-08-18
 
 ### 🐛 Bug fixes
 
@@ -17,8 +17,7 @@
 
 ### 👷 Build
 
-- _(dockerfile)_ move `healthcheck` to `docker-compose` - ([bd90180](https://github.com/DeadNews/deadnews-template-python/commit/bd90180d064d28c03a5bfd37e25e22fca1471d76))
-- _(dockerfile)_ move `healthcheck` to `docker-compose` - ([9d72a8d](https://github.com/DeadNews/deadnews-template-python/commit/9d72a8dfc566cf63c785c6a92aa676c9abb65449))
+- _(dockerfile)_ move `healthcheck` to `docker-compose` ([#253](https://github.com/DeadNews/deadnews-template-python/issues/253)) - ([2f19075](https://github.com/DeadNews/deadnews-template-python/commit/2f19075ace5e8767b41f88e03ec09e225cabd145))
 
 ### ⚙️ CI/CD
 
