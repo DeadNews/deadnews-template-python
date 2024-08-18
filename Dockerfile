@@ -51,7 +51,7 @@ RUN pip install /app/*.whl
 
 USER guest:users
 EXPOSE ${UVICORN_PORT}
-HEALTHCHECK --interval=1m --retries=3 --timeout=10s --start-period=1m \
-    CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:${UVICORN_PORT}/health || exit 1
+HEALTHCHECK NONE
 
-CMD [ "python", "-m", "uvicorn", "deadnews_template_python:app" ]
+ENTRYPOINT [ "python", "-m", "uvicorn" ]
+CMD [ "deadnews_template_python:app" ]
