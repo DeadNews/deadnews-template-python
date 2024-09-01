@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.10-alpha.0](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.9...v2.0.10-alpha.0) - 2024-09-01
+
+### ⚙️ CI/CD
+
+- _(github)_ enable `digital attestations` for `pypi` - ([871e1fc](https://github.com/DeadNews/deadnews-template-python/commit/871e1fc04a04a5763bf3f4a56146234d8313829b))
+
+### ⬆️ Dependencies
+
+- _(deps)_ update dependency fastapi to v0.112.2 ([#256](https://github.com/DeadNews/deadnews-template-python/issues/256)) - ([e58853c](https://github.com/DeadNews/deadnews-template-python/commit/e58853c52db01644d978c3960a48c558541a7564))
+
 ## [2.0.9](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.8...v2.0.9) - 2024-08-18
 
 ### 🐛 Bug fixes
