@@ -1,4 +1,4 @@
-FROM python:3.13.0-alpine@sha256:81362dd1ee15848b118895328e56041149e1521310f238ed5b2cdefe674e6dbf AS base
+FROM python:3.13.0-alpine@sha256:92e0e7f0e119e631e5d08a77bab4e2f35a93c727057cae6528d58880f8e77f6e AS base
 LABEL maintainer="DeadNews <deadnewsgit@gmail.com>"
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
