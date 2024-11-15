@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.11](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.10...v2.0.11) - 2024-11-15
+
+### 🧹 Chores
+
+- _(config)_ migrate config .renovaterc.json ([#290](https://github.com/DeadNews/deadnews-template-python/issues/290)) - ([24f4aca](https://github.com/DeadNews/deadnews-template-python/commit/24f4aca824231962d3a3a3bfee1664cccf18df96))
+
+### ⬆️ Dependencies
+
+- _(deps)_ update dependency fastapi to v0.115.5 ([#294](https://github.com/DeadNews/deadnews-template-python/issues/294)) - ([28df26c](https://github.com/DeadNews/deadnews-template-python/commit/28df26c1e03feb0e74c204f7571968a265fe84d4))
+- _(deps)_ update dependency fastapi to v0.115.4 ([#289](https://github.com/DeadNews/deadnews-template-python/issues/289)) - ([342a441](https://github.com/DeadNews/deadnews-template-python/commit/342a441b658b2beef8619233370b9e68e5891b44))
+- _(deps)_ update dependency fastapi to v0.115.3 ([#288](https://github.com/DeadNews/deadnews-template-python/issues/288)) - ([7bc5cb6](https://github.com/DeadNews/deadnews-template-python/commit/7bc5cb6b2793a240c91dfe935985ba30f097a990))
+
 ## [2.0.10](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.9...v2.0.10) - 2024-10-15
 
 ### ⚙️ CI/CD
