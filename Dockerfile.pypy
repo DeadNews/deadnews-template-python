@@ -15,7 +15,7 @@ WORKDIR /app
 FROM base AS py-builder
 
 # renovate: datasource=pypi dep_name=poetry
-ENV POETRY_VERSION="1.8.4"
+ENV POETRY_VERSION="1.8.5"
 ENV POETRY_VIRTUALENVS_IN_PROJECT=1 \
     # Disable the dynamic versioning.
     POETRY_DYNAMIC_VERSIONING_COMMANDS="" \
