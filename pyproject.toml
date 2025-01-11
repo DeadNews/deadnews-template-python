@@ -25,10 +25,10 @@ pydantic = "^2.9.2"
 uvicorn = "^0.34.0"
 
 [tool.poetry.group.lint.dependencies]
-mypy = "^1.13.0"
-poethepoet = "^0.31.1"
-pyright = "^1.1.390"
-ruff = "^0.8.3"
+mypy = "^1.14.1"
+poethepoet = "^0.32.1"
+pyright = "^1.1.391"
+ruff = "^0.9.1"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.4"
@@ -38,10 +38,10 @@ pytest-cov = "^6.0.0"
 mkdocs = "^1.6.1"
 mkdocs-gen-files = "^0.5.0"
 mkdocs-literate-nav = "^0.6.1"
-mkdocs-material = "^9.5.48"
+mkdocs-material = "^9.5.49"
 mkdocs-swagger-ui-tag = "^0.6.11"
 mkdocstrings = "^0.27.0"
-mkdocstrings-python = "^1.12.2"
+mkdocstrings-python = "^1.13.0"
 
 [tool.poetry-dynamic-versioning]
 enable = true
