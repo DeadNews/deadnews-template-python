@@ -18,20 +18,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install poetry
-        run: pipx install poetry
-
-      - uses: actions/setup-python@v5
+      - name: Install uv
+        uses: astral-sh/setup-uv@bd01e18f51369d5a26f1651c3cb451d3417e3bba # v6.3.1
         with:
-          cache: poetry
+          enable-cache: true
 
-      - name: Install deps
-        run: poetry install
+      - name: Install project
+        run: uv sync --frozen
 
       - name: Lint code
-        run: poetry run poe lint
+        run: make lint
 
-  tests:
+  test:
     name: Tests
     strategy:
       fail-fast: false
@@ -63,7 +61,7 @@ jobs:
   pypi-deploy:
     name: Release to PyPI
     if: github.ref_type == 'tag'
-    needs: [lint, tests]
+    needs: [lint, test]
     environment: pypi
     permissions:
       id-token: write
@@ -87,7 +85,7 @@ jobs:
   github-deploy:
     name: Release to GitHub
     if: github.ref_type == 'tag'
-    needs: [lint, tests]
+    needs: [lint, test]
     environment: github-releases
     permissions:
       contents: write
@@ -111,7 +109,7 @@ jobs:
   docs-build:
     name: Build docs
     if: github.ref_type == 'tag'
-    needs: [lint, tests]
+    needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

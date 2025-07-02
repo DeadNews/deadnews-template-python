@@ -24,12 +24,12 @@ repos:
       - id: prettier
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.30.1
+    rev: v1.32.0
     hooks:
       - id: typos
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.31.3
+    rev: 0.33.0
     hooks:
       - id: check-github-workflows
       - id: check-renovate
@@ -39,13 +39,8 @@ repos:
     hooks:
       - id: actionlint
 
-  - repo: https://github.com/mrtazz/checkmake
-    rev: 0.2.2
-    hooks:
-      - id: checkmake
-
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.10
+    rev: v0.11.8
     hooks:
       - id: ruff-format
       - id: ruff
@@ -55,12 +50,6 @@ repos:
     rev: v1.15.0
     hooks:
       - id: mypy
-
-  - repo: https://github.com/python-poetry/poetry
-    rev: 1.8.5
-    hooks:
-      - id: poetry-check
-        args: [--lock]
 
   - repo: https://github.com/aleksac/hadolint-py
     rev: v2.12.0

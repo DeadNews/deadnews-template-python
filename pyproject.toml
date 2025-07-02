@@ -1,62 +1,75 @@
-[build-system]
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
-build-backend = "poetry_dynamic_versioning.backend"
-
-[tool.poetry]
+[project]
 name = "deadnews-template-python"
-version = "0.0.0"
 description = "Python Project Template"
-authors = ["DeadNews <deadnewsgit@gmail.com>"]
-license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/deadnews/deadnews-template-python"
-repository = "https://github.com/deadnews/deadnews-template-python"
-documentation = "https://deadnews.github.io/deadnews-template-python"
+license = "MIT"
+authors = [{ name = "DeadNews", email = "deadnewsgit@gmail.com" }]
 keywords = ["python", "template", "layout"]
 classifiers = ["Operating System :: OS Independent"]
+dynamic = ["version"]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[all]>=0.115.0",
+    "pydantic>=2.9.2",
+    "uvicorn>=0.34.0",
+]
 
-[tool.poetry.scripts]
+[dependency-groups]
+dev = [
+    "mypy>=1.16.0",
+    "pyright>=1.1.401",
+    "ruff>=0.11.12",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "mkdocs>=1.6.1",
+    "mkdocs-gen-files>=0.5.0",
+    "mkdocs-literate-nav>=0.6.2",
+    "mkdocs-material>=9.6.14",
+    "mkdocs-swagger-ui-tag>=0.7.1",
+    "mkdocstrings>=0.29.1",
+    "mkdocstrings-python>=1.16.11",
+]
+
+[project.scripts]
 deadnews-template-python = "deadnews_template_python.__main__:main"
 
-[tool.poetry.dependencies]
-python = "^3.10"
-fastapi = { version = "^0.115.0", extras = ["all"] }
-pydantic = "^2.9.2"
-uvicorn = "^0.34.0"
+[project.urls]
+Repository = "https://github.com/deadnews/deadnews-template-python"
+Changelog = "https://github.com/deadnews/deadnews-template-python/CHANGELOG.md"
+Documentation = "https://deadnews.github.io/deadnews-template-python"
 
-[tool.poetry.group.lint.dependencies]
-mypy = "^1.16.0"
-poethepoet = "^0.34.0"
-pyright = "^1.1.401"
-ruff = "^0.11.12"
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
 
-[tool.poetry.group.test.dependencies]
-pytest = "^8.3.5"
-pytest-cov = "^6.1.1"
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
 
-[tool.poetry.group.docs.dependencies]
-mkdocs = "^1.6.1"
-mkdocs-gen-files = "^0.5.0"
-mkdocs-literate-nav = "^0.6.2"
-mkdocs-material = "^9.6.14"
-mkdocs-swagger-ui-tag = "^0.7.1"
-mkdocstrings = "^0.29.1"
-mkdocstrings-python = "^1.16.11"
-
-[tool.poetry-dynamic-versioning]
-enable = true
+[tool.uv-dynamic-versioning]
 vcs = "git"
 style = "semver"
 
-[tool.poe.tasks]
-mypy = "mypy ."
-pyright = "pyright ."
-ruff = "ruff check ."
-ruff-fmt = "ruff format ."
-lint.sequence = ["ruff", "ruff-fmt", "mypy", "pyright"]
+[tool.ruff]
+line-length = 99
+format.line-ending = "lf"
 
-[tool.poe.tasks.test]
-cmd = "pytest --cov-report=xml"
+[tool.ruff.lint]
+flake8-tidy-imports.ban-relative-imports = "all"
+pycodestyle.max-doc-length = 129
+pycodestyle.max-line-length = 129
+pydocstyle.convention = "google"
+select = ["ALL"]
+ignore = [
+    "COM812",  # Trailing comma missing
+    "FBT001",  # Boolean positional arg in function definition
+    "FBT002",  # Boolean default value in function definition
+    "ISC001",  # Checks for implicitly concatenated strings on a single line
+    "PLR0913", # Too many arguments to function call
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/*" = ["ANN", "D", "E501", "PLC1901", "PLR2004", "S"]
 
 [tool.pytest.ini_options]
 addopts = "--verbose --cov=./src --cov-report=term"
@@ -65,9 +78,9 @@ markers = ["online"]
 
 [tool.coverage.report]
 exclude_lines = [
-  "# pragma: no cover",
-  "if __name__ == .__main__.:",
-  "if TYPE_CHECKING:",
+    "# pragma: no cover",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
 ]
 
 [tool.mypy]
@@ -86,34 +99,3 @@ disallow_untyped_defs = false
 include = ["src"]
 ignore = ["tests"]
 typeCheckingMode = "standard"
-
-[tool.ruff]
-line-length = 99
-target-version = "py311" # Until Poetry v2
-
-[tool.ruff.format]
-line-ending = "lf"
-
-[tool.ruff.lint]
-select = ["ALL"]
-ignore = [
-  "COM812",  # Trailing comma missing
-  "FBT001",  # Boolean positional arg in function definition
-  "FBT002",  # Boolean default value in function definition
-  "ISC001",  # Checks for implicitly concatenated strings on a single line
-  "PLR0913", # Too many arguments to function call
-]
-
-[tool.ruff.lint.per-file-ignores]
-"__init__.py" = ["F401"]
-"tests/*" = ["ANN", "D", "E501", "PLC1901", "PLR2004", "S"]
-
-[tool.ruff.lint.flake8-tidy-imports]
-ban-relative-imports = "all"
-
-[tool.ruff.lint.pycodestyle]
-max-doc-length = 129
-max-line-length = 129
-
-[tool.ruff.lint.pydocstyle]
-convention = "google"

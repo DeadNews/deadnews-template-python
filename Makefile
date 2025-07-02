@@ -3,40 +3,41 @@
 default: checks
 
 install:
-	pre-commit install
-	poetry install --sync
+	uv sync
 
 lock:
-	poetry lock --no-update
+	uv lock
 
 update:
-	poetry up --latest
+	uv lock --upgrade
+	uv sync
+
+run:
+	uv run uvicorn --reload deadnews_template_python:app
 
 checks: pc install lint test
 pc:
 	pre-commit run -a
 lint:
-	poetry run poe lint
+	uv run ruff check .
+	uv run ruff format .
+	uv run mypy .
+	uv run pyright .
 test:
-	poetry run poe test
+	uv run pytest --cov-report=xml
 
-docs:
-	poetry run mkdocs serve
-
-run:
-	poetry run uvicorn --reload deadnews_template_python:app
+doc:
+	uv run mkdocs serve
 
 bumped:
 	git cliff --bumped-version
 
-# make release-tag_name
-# make release-$(git cliff --bumped-version)-alpha.0
-release-%: checks
-	git cliff -o CHANGELOG.md --tag $*
+# make release TAG=$(git cliff --bumped-version)-alpha.0
+release: checks
+	git cliff -o CHANGELOG.md --tag $(TAG)
 	pre-commit run --files CHANGELOG.md || pre-commit run --files CHANGELOG.md
 	git add CHANGELOG.md
-	git commit -m "chore(release): prepare for $*"
+	git commit -m "chore(release): prepare for $(TAG)"
 	git push
-	git tag -a $* -m "chore(release): $*"
-	git push origin $*
-	git tag --verify $*
+	git tag -a $(TAG) -m "chore(release): $(TAG)"
+	git push origin $(TAG)
