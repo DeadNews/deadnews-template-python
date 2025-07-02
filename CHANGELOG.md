@@ -1,5 +1,37 @@
 # Changelog
 
+## [2.1.0-alpha.0](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.11...v2.1.0-alpha.0) - 2025-07-02
+
+### 🚀 Features
+
+- migrate from `poetry` to `uv`. - ([3b530fc](https://github.com/DeadNews/deadnews-template-python/commit/3b530fca01369f397c903f73df442a84c2430de5))
+- migrate from `poetry` to `uv`. - ([fa61d6a](https://github.com/DeadNews/deadnews-template-python/commit/fa61d6a1c6352825b271bc97e4fdfcde1c59898f))
+
+### ⚙️ CI/CD
+
+- _(github)_ remove `macos` from tests matrix - ([eb8f0bd](https://github.com/DeadNews/deadnews-template-python/commit/eb8f0bdc852a56afaf22b24891d1f70d7af97c02))
+
+### ⬆️ Dependencies
+
+- _(deps)_ update dependency pydantic to v2.11.5 ([#336](https://github.com/DeadNews/deadnews-template-python/issues/336)) - ([e56da77](https://github.com/DeadNews/deadnews-template-python/commit/e56da77290aec6b94c15d45802265a29c956308d))
+- _(deps)_ update dependency pydantic to v2.11.4 ([#334](https://github.com/DeadNews/deadnews-template-python/issues/334)) - ([5919ac0](https://github.com/DeadNews/deadnews-template-python/commit/5919ac0d7902ffd442ec10402a02c0851bad803d))
+- _(deps)_ update dependency pydantic to v2.11.1 ([#330](https://github.com/DeadNews/deadnews-template-python/issues/330)) - ([6a41ce4](https://github.com/DeadNews/deadnews-template-python/commit/6a41ce4aae27ee4521e223df8f5f6e61578d3883))
+- _(deps)_ update dependency fastapi to v0.115.12 ([#329](https://github.com/DeadNews/deadnews-template-python/issues/329)) - ([a83516c](https://github.com/DeadNews/deadnews-template-python/commit/a83516c71126135dd679a84f0143939595f29d1d))
+- _(deps)_ update dependency fastapi to v0.115.11 ([#325](https://github.com/DeadNews/deadnews-template-python/issues/325)) - ([f8d9ac8](https://github.com/DeadNews/deadnews-template-python/commit/f8d9ac87cf3e5e0bc93d408fa095fbee67b84711))
+- _(deps)_ update dependency fastapi to v0.115.10 ([#324](https://github.com/DeadNews/deadnews-template-python/issues/324)) - ([ea53d87](https://github.com/DeadNews/deadnews-template-python/commit/ea53d8782246889b4e61c144e78abe494dbce29d))
+- _(deps)_ update dependency fastapi to v0.115.8 ([#319](https://github.com/DeadNews/deadnews-template-python/issues/319)) - ([1f91517](https://github.com/DeadNews/deadnews-template-python/commit/1f91517f7fac1b6f22ca08a81a7bf78dd5fcb2d2))
+- _(deps)_ update dependency pydantic to v2.10.6 ([#318](https://github.com/DeadNews/deadnews-template-python/issues/318)) - ([ed53942](https://github.com/DeadNews/deadnews-template-python/commit/ed539422c97f19d7d7c4ca5c451141b33fba7af6))
+- _(deps)_ update dependency fastapi to v0.115.7 ([#317](https://github.com/DeadNews/deadnews-template-python/issues/317)) - ([feb6498](https://github.com/DeadNews/deadnews-template-python/commit/feb64981bf674c3f743311daf1b95da795f7d15f))
+- _(deps)_ update dependency pydantic to v2.10.5 ([#315](https://github.com/DeadNews/deadnews-template-python/issues/315)) - ([99a801c](https://github.com/DeadNews/deadnews-template-python/commit/99a801ced80249e05affe8d12823f3592999971c))
+- _(deps)_ update dependency uvicorn to ^0.34.0 ([#311](https://github.com/DeadNews/deadnews-template-python/issues/311)) - ([e80d3e8](https://github.com/DeadNews/deadnews-template-python/commit/e80d3e8669e0b63d7d467a9611716a0cc6ef114c))
+- _(deps)_ update dependency pydantic to v2.10.4 ([#310](https://github.com/DeadNews/deadnews-template-python/issues/310)) - ([c3c0ff3](https://github.com/DeadNews/deadnews-template-python/commit/c3c0ff324bb56b730a9cb0707d5e45556b31be2f))
+- _(deps)_ update dependency uvicorn to ^0.33.0 ([#309](https://github.com/DeadNews/deadnews-template-python/issues/309)) - ([353b61c](https://github.com/DeadNews/deadnews-template-python/commit/353b61cf8d5766b6811740e5f41b99bd97aa7fa9))
+- _(deps)_ update dependency pydantic to v2.10.3 ([#304](https://github.com/DeadNews/deadnews-template-python/issues/304)) - ([8659cdf](https://github.com/DeadNews/deadnews-template-python/commit/8659cdfc119081aa0c696bf5be07eaf5c858c870))
+- _(deps)_ update dependency fastapi to v0.115.6 ([#303](https://github.com/DeadNews/deadnews-template-python/issues/303)) - ([287e8bb](https://github.com/DeadNews/deadnews-template-python/commit/287e8bbf4b1cf1b06ff69b5677f29b5055fbca07))
+- _(deps)_ update dependency pydantic to v2.10.2 ([#301](https://github.com/DeadNews/deadnews-template-python/issues/301)) - ([b38d464](https://github.com/DeadNews/deadnews-template-python/commit/b38d4648b5734d0c860d5dda0117ca932e23556b))
+- _(deps)_ update dependency pydantic to v2.10.1 ([#300](https://github.com/DeadNews/deadnews-template-python/issues/300)) - ([0fc0c72](https://github.com/DeadNews/deadnews-template-python/commit/0fc0c725ef55d4c870888b7c8dba2eef60f95455))
+- _(deps)_ update dependency uvicorn to v0.32.1 ([#299](https://github.com/DeadNews/deadnews-template-python/issues/299)) - ([3deea02](https://github.com/DeadNews/deadnews-template-python/commit/3deea02ade13c1005106d747c6638de20ff72fa2))
+
 ## [2.0.11](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.10...v2.0.11) - 2024-11-15
 
 ### 🧹 Chores
