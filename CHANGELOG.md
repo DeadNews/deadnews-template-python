@@ -1,9 +1,10 @@
 # Changelog
 
-## [2.1.0-alpha.0](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.11...v2.1.0-alpha.0) - 2025-07-02
+## [2.1.0-alpha.1](https://github.com/DeadNews/deadnews-template-python/compare/v2.0.11...v2.1.0-alpha.1) - 2025-07-02
 
 ### 🚀 Features
 
+- migrate from `poetry` to `uv`. - ([9a96dec](https://github.com/DeadNews/deadnews-template-python/commit/9a96dece2d9d5819791c875421445b70a542db14))
 - migrate from `poetry` to `uv`. - ([3b530fc](https://github.com/DeadNews/deadnews-template-python/commit/3b530fca01369f397c903f73df442a84c2430de5))
 - migrate from `poetry` to `uv`. - ([fa61d6a](https://github.com/DeadNews/deadnews-template-python/commit/fa61d6a1c6352825b271bc97e4fdfcde1c59898f))
 
