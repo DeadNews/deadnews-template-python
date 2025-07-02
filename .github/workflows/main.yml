@@ -34,29 +34,27 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest] # macos-latest, windows-latest
+        os: [ubuntu-latest]
         python-version: ["3.13"]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install poetry
-        run: pipx install poetry
-
-      - uses: actions/setup-python@v5
+      - name: Install uv
+        uses: astral-sh/setup-uv@bd01e18f51369d5a26f1651c3cb451d3417e3bba # v6.3.1
         with:
+          enable-cache: true
           python-version: ${{ matrix.python-version }}
-          cache: poetry
 
-      - name: Install
-        run: poetry install
+      - name: Install project
+        run: uv sync --frozen
 
       - name: Run tests
-        run: poetry run poe test
+        run: make test
 
       - name: Upload coverage to Codecov
         if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.13'
-        uses: codecov/codecov-action@4fe8c5f003fae66aa5ebb77cfd3e7bfbbda0b6b0 # v3.1.5
+        uses: codecov/codecov-action@18283e04ce6e62d37312384ff67231eb8fd56d24 # v5.4.3
 
   pypi-deploy:
     name: Release to PyPI
@@ -69,15 +67,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install poetry
-        run: |
-          pipx install poetry
-          pipx inject poetry poetry-dynamic-versioning[plugin]
-
-      - uses: actions/setup-python@v5
+      - name: Install uv
+        uses: astral-sh/setup-uv@bd01e18f51369d5a26f1651c3cb451d3417e3bba # v6.3.1
+        with:
+          enable-cache: true
 
       - name: Build package
-        run: poetry build
+        run: uv build
 
       - name: Publish package to PyPI
         uses: pypa/gh-action-pypi-publish@76f52bc884231f62b9a034ebfe128415bbaabdfc # v1.12.4
@@ -123,7 +119,7 @@ jobs:
         with:
           cache: poetry
 
-      - name: Install deps
+      - name: Install project
         run: poetry install
 
       - name: Build docs
