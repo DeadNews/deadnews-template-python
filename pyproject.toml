@@ -1,100 +1,65 @@
-[build-system]
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
-build-backend = "poetry_dynamic_versioning.backend"
-
-[tool.poetry]
-name = "deadnews-template-python"
-version = "0.0.0"
+[project]
+name        = "deadnews-template-python"
 description = "Python Project Template"
-authors = ["DeadNews <deadnewsgit@gmail.com>"]
-license = "MIT"
-readme = "README.md"
-homepage = "https://github.com/deadnews/deadnews-template-python"
-repository = "https://github.com/deadnews/deadnews-template-python"
-documentation = "https://deadnews.github.io/deadnews-template-python"
-keywords = ["python", "template", "layout"]
+readme      = "README.md"
+license     = "MIT"
+authors     = [{ name = "DeadNews", email = "deadnewsgit@gmail.com" }]
+keywords    = ["python", "template", "layout"]
 classifiers = ["Operating System :: OS Independent"]
+dynamic     = ["version"]
 
-[tool.poetry.scripts]
-deadnews-template-python = "deadnews_template_python.__main__:main"
-
-[tool.poetry.dependencies]
-python = "^3.10"
-fastapi = { version = "^0.115.0", extras = ["all"] }
-pydantic = "^2.9.2"
-uvicorn = "^0.34.0"
-
-[tool.poetry.group.lint.dependencies]
-mypy = "^1.16.0"
-poethepoet = "^0.34.0"
-pyright = "^1.1.401"
-ruff = "^0.11.12"
-
-[tool.poetry.group.test.dependencies]
-pytest = "^8.3.5"
-pytest-cov = "^6.1.1"
-
-[tool.poetry.group.docs.dependencies]
-mkdocs = "^1.6.1"
-mkdocs-gen-files = "^0.5.0"
-mkdocs-literate-nav = "^0.6.2"
-mkdocs-material = "^9.6.14"
-mkdocs-swagger-ui-tag = "^0.7.1"
-mkdocstrings = "^0.29.1"
-mkdocstrings-python = "^1.16.11"
-
-[tool.poetry-dynamic-versioning]
-enable = true
-vcs = "git"
-style = "semver"
-
-[tool.poe.tasks]
-mypy = "mypy ."
-pyright = "pyright ."
-ruff = "ruff check ."
-ruff-fmt = "ruff format ."
-lint.sequence = ["ruff", "ruff-fmt", "mypy", "pyright"]
-
-[tool.poe.tasks.test]
-cmd = "pytest --cov-report=xml"
-
-[tool.pytest.ini_options]
-addopts = "--verbose --cov=./src --cov-report=term"
-testpaths = ["tests"]
-markers = ["online"]
-
-[tool.coverage.report]
-exclude_lines = [
-  "# pragma: no cover",
-  "if __name__ == .__main__.:",
-  "if TYPE_CHECKING:",
+requires-python = ">=3.13"
+dependencies = [
+  "fastapi[all]>=0.115.0",
+  "pydantic>=2.9.2",
+  "uvicorn>=0.34.0",
 ]
 
-[tool.mypy]
-disallow_untyped_defs = true
-follow_imports = "normal"
-ignore_missing_imports = true
-show_column_numbers = true
-show_error_codes = true
-warn_unused_ignores = true
+[dependency-groups]
+dev = [
+  "mypy>=1.16.0",
+  "pyright>=1.1.401",
+  "ruff>=0.11.12",
+  "pytest>=8.3.5",
+  "pytest-cov>=6.1.1",
+  "mkdocs>=1.6.1",
+  "mkdocs-gen-files>=0.5.0",
+  "mkdocs-literate-nav>=0.6.2",
+  "mkdocs-material>=9.6.14",
+  "mkdocs-swagger-ui-tag>=0.7.1",
+  "mkdocstrings>=0.29.1",
+  "mkdocstrings-python>=1.16.11",
+]
 
-[[tool.mypy.overrides]]
-module = ["tests.*"]
-disallow_untyped_defs = false
+[project.scripts]
+deadnews-template-python = "deadnews_template_python.__main__:main"
 
-[tool.pyright]
-include = ["src"]
-ignore = ["tests"]
-typeCheckingMode = "standard"
+[project.urls]
+Repository    = "https://github.com/deadnews/deadnews-template-python"
+Changelog     = "https://github.com/deadnews/deadnews-template-python/CHANGELOG.md"
+Documentation = "https://deadnews.github.io/deadnews-template-python"
+
+[build-system]
+requires      = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[tool.uv-dynamic-versioning]
+vcs   = "git"
+style = "semver"
 
 [tool.ruff]
-line-length = 99
-target-version = "py311" # Until Poetry v2
-
-[tool.ruff.format]
-line-ending = "lf"
+line-length        = 99
+format.line-ending = "lf"
 
 [tool.ruff.lint]
+flake8-tidy-imports.ban-relative-imports = "all"
+pycodestyle.max-doc-length               = 129
+pycodestyle.max-line-length              = 129
+pydocstyle.convention                    = "google"
+
 select = ["ALL"]
 ignore = [
   "COM812",  # Trailing comma missing
@@ -106,14 +71,33 @@ ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
-"tests/*" = ["ANN", "D", "E501", "PLC1901", "PLR2004", "S"]
+"tests/*"     = ["ANN", "D", "E501", "PLC1901", "PLR2004", "S"]
 
-[tool.ruff.lint.flake8-tidy-imports]
-ban-relative-imports = "all"
+[tool.pytest.ini_options]
+addopts   = "--verbose --cov=./src --cov-report=term --cov-report=xml"
+testpaths = ["tests"]
+markers   = ["online"]
 
-[tool.ruff.lint.pycodestyle]
-max-doc-length = 129
-max-line-length = 129
+[tool.coverage.report]
+exclude_lines = [
+  "# pragma: no cover",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
 
-[tool.ruff.lint.pydocstyle]
-convention = "google"
+[tool.mypy]
+disallow_untyped_defs  = true
+follow_imports         = "normal"
+ignore_missing_imports = true
+show_column_numbers    = true
+show_error_codes       = true
+warn_unused_ignores    = true
+
+[[tool.mypy.overrides]]
+module                = ["tests.*"]
+disallow_untyped_defs = false
+
+[tool.pyright]
+include          = ["src"]
+ignore           = ["tests"]
+typeCheckingMode = "standard"
