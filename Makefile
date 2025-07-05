@@ -3,6 +3,7 @@
 default: checks
 
 install:
+	pre-commit install
 	uv sync
 
 lock:
@@ -23,7 +24,7 @@ lint:
 	uv run mypy .
 	uv run pyright .
 test:
-	uv run pytest --cov-report=xml
+	uv run pytest
 
 doc:
 	uv run mkdocs serve

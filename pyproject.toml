@@ -74,7 +74,7 @@ ignore = [
 "tests/*"     = ["ANN", "D", "E501", "PLC1901", "PLR2004", "S"]
 
 [tool.pytest.ini_options]
-addopts   = "--verbose --cov=./src --cov-report=term"
+addopts   = "--verbose --cov=./src --cov-report=term --cov-report=xml"
 testpaths = ["tests"]
 markers   = ["online"]
 

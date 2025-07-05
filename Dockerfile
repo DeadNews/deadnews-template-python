@@ -19,6 +19,12 @@ ENV UV_CACHE_DIR="/cache/uv" \
 # Install uv
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/
 
+# Install dependencies
+RUN --mount=type=cache,target=${UV_CACHE_DIR} \
+    --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --locked --no-dev --no-install-project
+
 # Install project
 COPY pyproject.toml uv.lock README.md src ./
 RUN --mount=type=cache,target=${UV_CACHE_DIR} \
