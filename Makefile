@@ -9,8 +9,7 @@ lock:
 	uv lock
 
 update:
-	uv lock --upgrade
-	uv sync
+	uv sync --upgrade
 
 run:
 	uv run uvicorn --reload deadnews_template_python:app
