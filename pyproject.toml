@@ -1,14 +1,14 @@
 [project]
-name        = "deadnews-template-python"
-description = "Python Project Template"
-readme      = "README.md"
-license     = "MIT"
-authors     = [{ name = "DeadNews", email = "deadnewsgit@gmail.com" }]
-keywords    = ["python", "template", "layout"]
-classifiers = ["Operating System :: OS Independent"]
-dynamic     = ["version"]
-
+name            = "deadnews-template-python"
+description     = "Python Project Template"
+readme          = "README.md"
+license         = "MIT"
+authors         = [{ name = "deadnews", email = "deadnewsgit@gmail.com" }]
+classifiers     = ["Operating System :: OS Independent"]
+keywords        = ["python", "template", "layout"]
+dynamic         = ["version"]
 requires-python = ">=3.13"
+
 dependencies = [
   "fastapi[all]>=0.115.0",
   "pydantic>=2.9.2",
@@ -76,7 +76,7 @@ ignore = [
 [tool.pytest.ini_options]
 addopts   = "--verbose --cov=./src --cov-report=term --cov-report=xml"
 testpaths = ["tests"]
-markers   = ["online"]
+markers   = ["testcontainers"]
 
 [tool.coverage.report]
 exclude_lines = [
