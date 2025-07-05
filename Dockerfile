@@ -1,53 +1,36 @@
-FROM python:3.13.2-alpine@sha256:bb2c06f24622d10187d0884b5b0a66426a9c8511c344492ed61b5d382bd6018c AS base
+FROM python:3.13.5-alpine@sha256:9b4929a72599b6c6389ece4ecbf415fd1355129f22bb92bb137eea098f05e975 AS base
 LABEL maintainer="DeadNews <deadnewsgit@gmail.com>"
 
-ENV PIP_DEFAULT_TIMEOUT=100 \
-    PIP_DISABLE_PIP_VERSION_CHECK=1 \
-    # Avoid to write .pyc files.
-    PYTHONDONTWRITEBYTECODE=1 \
-    # Allow messages to immediately appear.
-    PYTHONUNBUFFERED=1 \
-    # Tracebacks on segfaults.
-    PYTHONFAULTHANDLER=1
+# No .pyc files, tracebacks, real-time logs
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONFAULTHANDLER=1 \
+    PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-FROM base AS py-builder
+FROM base AS builder
 
-# renovate: datasource=pypi dep_name=poetry
-ENV POETRY_VERSION="1.8.5"
-ENV POETRY_VIRTUALENVS_IN_PROJECT=1 \
-    # Disable the dynamic versioning.
-    POETRY_DYNAMIC_VERSIONING_COMMANDS="" \
-    # Maunt as dedicated RUN cache.
-    POETRY_CACHE_DIR="/cache/poetry" \
-    PIP_CACHE_DIR="/cache/pip"
+ENV UV_CACHE_DIR="/cache/uv" \
+    UV_COMPILE_BYTECODE=1 \
+    UV_DYNAMIC_VERSIONING_BYPASS=1 \
+    UV_LINK_MODE=copy \
+    UV_PYTHON_DOWNLOADS=0
 
-# Install poetry.
-RUN --mount=type=cache,target=${PIP_CACHE_DIR} \
-    pip install "poetry==${POETRY_VERSION}"
+# Install uv
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/
 
-# Install gcc for building wheels. Alpine.
-RUN --mount=type=cache,target="/var/cache/" \
-    --mount=type=cache,target="/var/lib/apk/" \
-    apk add gcc
-
-# Install dependencies and build wheels.
-COPY pyproject.toml poetry.lock README.md src ./
-RUN --mount=type=cache,target=${POETRY_CACHE_DIR} \
-    poetry install --only=main --no-root && \
-    poetry build
+# Install project
+COPY pyproject.toml uv.lock README.md src ./
+RUN --mount=type=cache,target=${UV_CACHE_DIR} \
+    uv sync --locked --no-dev
 
 FROM base AS runtime
 
 ENV UVICORN_PORT=8000 \
     UVICORN_HOST=0.0.0.0 \
-    PATH="/app/.venv/bin/:$PATH"
+    PATH="/app/.venv/bin:$PATH"
 
-COPY --from=py-builder /app/.venv /app/.venv
-COPY --from=py-builder /app/dist/*.whl /app/
-
-RUN pip install /app/*.whl
+COPY --from=builder /app /app
 
 USER guest:users
 EXPOSE ${UVICORN_PORT}
